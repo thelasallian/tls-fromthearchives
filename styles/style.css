@@ -1,5 +1,67 @@
 @import url("fonts.css");
 
+:root{
+    --russet: #834826;
+    --light-orange: #F7D9B3;
+    --cornsilk: #F8EECC;
+}
+
 * {
     font-family: 'Arno Pro';
+}
+
+/* Footer */
+footer {
+    background-color: var(--russet);
+    margin-top: 3rem;
+}
+
+div.row {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+div.left {
+    justify-content: center;
+}
+
+figure {
+    text-align: center;
+}
+
+.footer-logo {
+    width: 454px;
+}
+
+.footer-heading {
+    color: var(--light-orange);
+    font-size: 1.5625em;
+    font-weight: 700;
+}
+
+.footer-description{
+    color: var(--cornsilk);
+    font-size: 1.25em;
+}
+
+a {
+    color: var(--cornsilk) !important;
+    text-decoration: none !important;
+    font-size: 1.25em;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--cornsilk) !important;
+    text-decoration: underline !important;
+}
+
+i {
+    color: var(--cornsilk);
+}
+
+.footer-developers {
+    color: var(--cornsilk);
+    font-size: 1.25em;
+    font-weight: 500;
 }
