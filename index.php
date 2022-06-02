@@ -16,11 +16,11 @@
 
     <!-- Header -->
     <header>
-      <div class="container d-flex-flex-column align-items-center">
+      <div class="container d-flex flex-column align-items-center">
         <div class="row">
           <div class="header-title col-xs-12 col-lg-4 col-sm-4 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start">
             <!-- Logo -->
-            <img src="images/old-tls-star.png" alt="The LaSallian FTA Star" class="header-logo mb-4" style= size: >
+            <img src="images/old-tls-star.png" alt="The LaSallian FTA Star" class="header-logo mb-4">
             <!-- Header Title -->
             <h3 class="header-title-top">From the</h3>
             <h1 class="header-title-bottom"><strong>Archives</strong></h1>
@@ -29,6 +29,34 @@
                                           mihi bona sunt, inclinet, amari petere vellent. Ab
                                           illo tempore, ab est sed immemorabili. Ullamco
                                           laboris nisi ut aliquid ex ea commodi consequat. </p>
+          </div>
+          
+          <div class="header-article col-md-4 col-xs-7 col-lg-7 col-sm-6 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start">
+            <div class="card">
+              <div class="row">
+
+                <div class="col-md-6 col-xs-12 col-lg-6 col-sm-6 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start">
+                  <div class="card-body">
+                    <h5 class="article-category"><strong>UNIVERSITY</strong></h5>
+                    <h4 class="article-title"><strong>From the Archives: Quito awarded professional lecture</strong></h4>
+                  
+                    <div class="d-flex flex-row">
+                      <p class="article-author"><strong>Mica Buencamino</strong></p>
+                      <p class="article-date">2 years ago</p>
+                    </div>
+                    
+                    <p class="article-intro">The ceremonies began at 4:30 in the afternoon with
+                                             opening remarks given by the Dean of Arts and Sciences, 
+                                             Exaltacion C. Ramos, Bro. Andrew Gonzalez, FSC, DLSU...</p>
+                    <a href="https://thelasallian.com/2020/12/26/from-the-archives-quito-awarded-professorial-lecture/" class="stretched-link"></a>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-xs-12 col-lg-6 col-sm-6 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start">
+                  <img class="card-img" src="images/article-visual.jpg" alt="Article Visual">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
