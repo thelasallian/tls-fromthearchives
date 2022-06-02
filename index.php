@@ -18,9 +18,9 @@
     <header>
       <div class="container d-flex-flex-column align-items-center">
         <div class="row">
-          <div class="header-title col-xs-12 col-lg5 col-sm-5 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start">
+          <div class="header-title col-xs-12 col-lg-4 col-sm-4 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start">
             <!-- Logo -->
-            <img src="images/old-tls-star.png" alt="The LaSallian FTA Star" class="header-logo mb-4">
+            <img src="images/old-tls-star.png" alt="The LaSallian FTA Star" class="header-logo mb-4" style= size: >
             <!-- Header Title -->
             <h3 class="header-title-top">From the</h3>
             <h1 class="header-title-bottom"><strong>Archives</strong></h1>
@@ -34,7 +34,7 @@
       </div>
     </header>
 
-    <h1>🦕🦕🦕</h1> <!-- Temporary -->
+    <h1 class="text-center">🦕🦕🦕</h1> <!-- Temporary -->
 
     <!-- Footer -->
     <footer class="py-5">

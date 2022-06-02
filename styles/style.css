@@ -10,6 +10,33 @@
     font-family: 'Arno Pro';
 }
 
+/* Header */
+header {
+    background-image: url(/images/Header.png);
+    background-size: cover;
+    background-position: center;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+
+h3.header-title-top {
+    font-size: 2em !important;
+    margin-top: -1rem;
+    color: var(--light-orange);
+}
+
+h1.header-title-bottom {
+    font-size: 4em !important;
+    color: var(--light-orange);
+    text-shadow: 1px 5px 15px black;
+    margin-top: -0.75rem;
+}
+
+p.header-description {
+    font-size: 1.25em !important;
+    color: var(--light-orange);
+}
+
 /* Footer */
 footer {
     background-color: var(--russet);
