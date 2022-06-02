@@ -13,8 +13,28 @@
     <title>The LaSallian: From the Archives</title>
   </head>
   <body>
-    <h1>🦕🦕🦕</h1> <!-- Temporary -->
 
+    <!-- Header -->
+    <header>
+      <div class="container d-flex-flex-column align-items-center">
+        <div class="row">
+          <div class="header-title col-xs-12 col-lg5 col-sm-5 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start">
+            <!-- Logo -->
+            <img src="images/old-tls-star.png" alt="The LaSallian FTA Star" class="header-logo mb-4">
+            <!-- Header Title -->
+            <h3 class="header-title-top">From the</h3>
+            <h1 class="header-title-bottom"><strong>Archives</strong></h1>
+            <!-- Header Description -->
+            <p class="header-description">This is a description of the FTA special. Plura
+                                          mihi bona sunt, inclinet, amari petere vellent. Ab
+                                          illo tempore, ab est sed immemorabili. Ullamco
+                                          laboris nisi ut aliquid ex ea commodi consequat. </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <h1>🦕🦕🦕</h1> <!-- Temporary -->
 
     <!-- Footer -->
     <footer class="py-5">
