@@ -45,6 +45,7 @@
                                 <img src="<?php echo $media; ?>" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $title; ?></h5>
+                                    <p class="card-text"><?php echo date('M d Y', strtotime($date)); ?></p>
                                     <p class="card-text"><?php echo $authors; ?></p>
                                 </div>
                             </div>
