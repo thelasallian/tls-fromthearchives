@@ -3,3 +3,38 @@
 * {
     font-family: 'Arno Pro';
 }
+
+body {
+    background-color: #C2A683 !important;
+}
+
+/* Article Cards */
+
+.articles a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.articles .card {
+    background-color: #F8EECC;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);;
+    color: #664011;
+}
+
+.articles .card-byline {
+    position: relative;
+}
+
+.articles .card-byline > .card-text {
+    padding: 0.1rem 1rem 0.1rem 3rem;
+}
+
+.articles .card-byline > img {
+    position: absolute;
+    bottom: 0.75rem;
+}
+
+.articles .card-author {
+    display: inline-block;
+    background-color: #FCE0BC;
+}

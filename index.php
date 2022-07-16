@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" rel="stylesheet" href="styles/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" rel="stylesheet" href="styles/style.css">
 
     <!-- Title -->
     <title>The LaSallian: From the Archives</title>
@@ -41,12 +41,15 @@
                     <div class="col-sm-6 col-lg-4 mb-4">
                         <!-- Display Article Card -->
                         <a href="<?php echo $link; ?>" target="_blank">
-                            <div class="card">
-                                <img src="<?php echo $media; ?>" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?php echo $title; ?></h5>
-                                    <p class="card-text"><?php echo date('M d Y', strtotime($date)); ?></p>
-                                    <p class="card-text"><?php echo $authors; ?></p>
+                            <div class="card border-0 rounded-0">
+                                <img src="<?php echo $media; ?>" class="card-img-top border-0 rounded-0" alt="...">
+                                <div class="card-body p-4">
+                                    <h4 class="card-title fw-bold"><?php echo $title; ?></h4>
+                                    <div class="card-byline">
+                                        <img src="../images/quill.png" alt="">
+                                        <p class="card-text fw-bold mb-0"><?php echo $authors; ?></p>
+                                        <p class="card-text card-author"><?php echo date('M d Y', strtotime($date)); ?></p>
+                                    </div>
                                 </div>
                             </div>
                         </a>
@@ -54,9 +57,9 @@
 
                     <div class="col-sm-6 col-lg-4 mb-4">
                         <!-- Display Image -->
-                        <div class="card">
+                        <div class="card border-0 rounded-0 p-3">
                             <img src="https://designshack.net/wp-content/uploads/placehold.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
+                            <div class="card-body mt-3 p-0">
                                 <p class="card-text">January 1, 2001. Lorem ipsum dolor sit caption.</p>
                             </div>
                         </div>
