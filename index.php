@@ -13,6 +13,8 @@
 
     <!-- Title -->
     <title>The LaSallian: From the Archives</title>
+
+    <!-- TODO: Add Favicon -->
 </head>
 <body>
     <h1>Hello, world!</h1> <!-- Temporary -->
@@ -26,7 +28,9 @@
                     $date = $data[$i]["date"];
                     $link = $data[$i]["link"];
                     $title = $data[$i]["title"]["rendered"];
+                    $media = $data[$i]["jetpack_featured_media_url"];
 
+                    // Determine authors:
                     for ($j = 0; $j < 3; $j++) {
                         if ($j == 0) {
                             $authors .= $data[$i]["authors"][$j]["display_name"];
@@ -35,8 +39,37 @@
                             $authors .= $data[$i]["authors"][$j]["display_name"];
                         }
                     }
+                    
+                    // Determine category/writing section:
+                    $k = 0;
+                    while ($data[$i]["categories"][$k] == 11) { // 11 == "Archives" category
+                        $k += 1;
+                    }
+                    $category = $data[$i]["categories"][$k];
 
-                    $media = $data[$i]["jetpack_featured_media_url"];
+                    switch ($category) {
+                        case 1891:
+                            $category = "Editorial";
+                            break;
+                        case 8:
+                            $category = "Menagarie";
+                            break;
+                        case 5:
+                            $category = "Opinion";
+                            break;
+                        case 6:
+                            $category = "Sports";
+                            break;
+                        case 4:
+                            $category = "University";
+                            break;
+                        case 1883:
+                            $category = "Vanguard";
+                            break;
+                        default:
+                            $category = "Uncategorized";
+                            break;
+                    }
                 ?>
                     <div class="col-sm-6 col-lg-4 mb-4">
                         <!-- Display Article Card -->
@@ -44,6 +77,7 @@
                             <div class="card border-0 rounded-0">
                                 <img src="<?php echo $media; ?>" class="card-img-top border-0 rounded-0" alt="...">
                                 <div class="card-body p-4">
+                                    <p class="card-text"><?php echo $category?></p>
                                     <h4 class="card-title fw-bold"><?php echo $title; ?></h4>
                                     <div class="card-byline">
                                         <img src="../images/quill.png" alt="">
@@ -65,7 +99,7 @@
                         </div>
                     </div>
                     
-                <?php $authors = ""; } ?>
+                <?php $authors = ""; } ?> <!-- for loop closing brace -->
             </div>
         </div>
     </section>
