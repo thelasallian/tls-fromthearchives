@@ -102,7 +102,7 @@
                     <div class="col-sm-6 col-lg-4 mb-4">
                         <!-- Display Image -->
                         <div class="card border-0 rounded-0 p-4">
-                            <img src="<?php echo $scanImg; ?>" class="card-img-top" alt="..." loading="lazy">
+                            <img src="<?php echo $scanImg; ?>" class="card-img-top rounded-0" alt="..." loading="lazy">
                             <div class="card-body mt-4 p-0">
                                 <p class="card-text"><?php echo $caption; ?></p>
                             </div>
