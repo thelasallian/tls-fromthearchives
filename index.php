@@ -78,7 +78,7 @@
                             <!-- Card -->
                             <div class="card border-0 rounded-0">
                                 <!-- Article Visual -->
-                                <img src="<?php echo $media; ?>" class="card-img-top border-0 rounded-0" alt="...">
+                                <img src="<?php echo $media; ?>" class="card-img-top border-0 rounded-0" alt="..." loading="lazy">
                                 <!-- Card Body -->
                                 <div class="card-body p-4">
                                     <p class="card-text card-category py-1 px-3 rounded-pill fw-bold"><?php echo $category?></p> <!-- Category -->
@@ -96,7 +96,7 @@
                     <div class="col-sm-6 col-lg-4 mb-4">
                         <!-- Display Image -->
                         <div class="card border-0 rounded-0 p-3">
-                            <img src="https://designshack.net/wp-content/uploads/placehold.jpg" class="card-img-top" alt="...">
+                            <img src="https://designshack.net/wp-content/uploads/placehold.jpg" class="card-img-top" alt="..." loading="lazy">
                             <div class="card-body mt-3 p-0">
                                 <p class="card-text">January 1, 2001. Lorem ipsum dolor sit caption.</p>
                             </div>
