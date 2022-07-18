@@ -22,7 +22,7 @@
     <section class="articles">
         <div class="container">
             <div class="row" data-masonry='{"percentPosition": true }'>
-                <?php for ($i = 1; $i < 9; $i++) { 
+                <?php for ($i = 1; $i < 10; $i++) { 
                     $data = $_SESSION["ARTICLE_INFO"];
 
                     $date = $data[$i]["date"]; // Article date
