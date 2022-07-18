@@ -52,7 +52,7 @@ body {
     bottom: 0.7rem;
 }
 
-.articles .card-author { /* Article Date */
+.articles .card-date { /* Article Date */
     display: inline-block;
     background-color: #FCE0BC;
 }
