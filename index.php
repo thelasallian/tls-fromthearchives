@@ -22,55 +22,61 @@
     <section class="articles">
         <div class="container">
             <div class="row" data-masonry='{"percentPosition": true }'>
-                <?php for ($i = 1; $i < 10; $i++) { 
-                    $data = $_SESSION["ARTICLE_INFO"];
+                <?php
+                    for ($i = 1; $i < 10; $i++) { 
+                        $articles = $_SESSION["ARTICLE_INFO"];
 
-                    $date = $data[$i]["date"]; // Article date
-                    $link = $data[$i]["link"]; // Article URL
-                    $title = $data[$i]["title"]["rendered"]; // Article title
-                    $media = $data[$i]["jetpack_featured_media_url"]; // Article visual
+                        $date = $articles[$i]["date"]; // Article date
+                        $link = $articles[$i]["link"]; // Article URL
+                        $title = $articles[$i]["title"]["rendered"]; // Article title
+                        $visual = $articles[$i]["jetpack_featured_media_url"]; // Article visual
 
-                    // Determine authors:
-                    for ($j = 0; $j < 3; $j++) {
-                        if ($j == 0) {
-                            $authors .= $data[$i]["authors"][$j]["display_name"];
-                        } else if ($j > 0 && !empty($data[$i]["authors"][$j]["display_name"]) ) {
-                            $authors .= ", ";
-                            $authors .= $data[$i]["authors"][$j]["display_name"];
+                        // Determine authors:
+                        for ($j = 0; $j < 3; $j++) {
+                            if ($j == 0) {
+                                $authors .= $articles[$i]["authors"][$j]["display_name"];
+                            } else if ($j > 0 && !empty($articles[$i]["authors"][$j]["display_name"]) ) {
+                                $authors .= ", ";
+                                $authors .= $articles[$i]["authors"][$j]["display_name"];
+                            }
                         }
-                    }
-                    
-                    // Determine category/writing section:
-                    $k = 0;
-                    while ($data[$i]["categories"][$k] == 11) { // 11 == "Archives" category
-                        $k++; // Skip "Archives" category
-                    }
-                    $category = $data[$i]["categories"][$k];
+                        
+                        // Determine category/writing section:
+                        $k = 0;
+                        while ($articles[$i]["categories"][$k] == 11) { // 11 == "Archives" category
+                            $k++; // Skip "Archives" category
+                        }
+                        $category = $articles[$i]["categories"][$k];
 
-                    // Convert category id to category name
-                    switch ($category) {
-                        case 1891:
-                            $category = "Editorial";
-                            break;
-                        case 8:
-                            $category = "Menagarie";
-                            break;
-                        case 5:
-                            $category = "Opinion";
-                            break;
-                        case 6:
-                            $category = "Sports";
-                            break;
-                        case 4:
-                            $category = "University";
-                            break;
-                        case 1883:
-                            $category = "Vanguard";
-                            break;
-                        default:
-                            $category = "Uncategorized";
-                            break;
-                    }
+                        // Convert category id to category name
+                        switch ($category) {
+                            case 1891:
+                                $category = "Editorial";
+                                break;
+                            case 8:
+                                $category = "Menagarie";
+                                break;
+                            case 5:
+                                $category = "Opinion";
+                                break;
+                            case 6:
+                                $category = "Sports";
+                                break;
+                            case 4:
+                                $category = "University";
+                                break;
+                            case 1883:
+                                $category = "Vanguard";
+                                break;
+                            default:
+                                $category = "Uncategorized";
+                                break;
+                        }
+
+                        $scans = json_decode(file_get_contents("https://github.com/ronnparcia/tls-fta-scans/blob/main/featured.json?raw=true"), true);;
+
+                        $scanImg = $scans[$i - 1]["image-url"];
+                        $caption = $scans[$i - 1]["caption"];
                 ?>
                     <div class="col-sm-6 col-lg-4 mb-4">
                         <!-- Display Article Card -->
@@ -78,7 +84,7 @@
                             <!-- Card -->
                             <div class="card border-0 rounded-0">
                                 <!-- Article Visual -->
-                                <img src="<?php echo $media; ?>" class="card-img-top border-0 rounded-0" alt="..." loading="lazy">
+                                <img src="<?php echo $visual; ?>" class="card-img-top border-0 rounded-0" alt="..." loading="lazy">
                                 <!-- Card Body -->
                                 <div class="card-body p-4">
                                     <p class="card-text card-category py-1 px-3 rounded-pill fw-bold"><?php echo $category?></p> <!-- Category -->
@@ -96,9 +102,9 @@
                     <div class="col-sm-6 col-lg-4 mb-4">
                         <!-- Display Image -->
                         <div class="card border-0 rounded-0 p-3">
-                            <img src="https://designshack.net/wp-content/uploads/placehold.jpg" class="card-img-top" alt="..." loading="lazy">
+                            <img src="<?php echo $scanImg; ?>" class="card-img-top" alt="..." loading="lazy">
                             <div class="card-body mt-3 p-0">
-                                <p class="card-text">January 1, 2001. Lorem ipsum dolor sit caption.</p>
+                                <p class="card-text"><?php echo $caption; ?></p>
                             </div>
                         </div>
                     </div>
