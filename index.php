@@ -25,10 +25,10 @@
                 <?php for ($i = 1; $i < 9; $i++) { 
                     $data = $_SESSION["ARTICLE_INFO"];
 
-                    $date = $data[$i]["date"];
-                    $link = $data[$i]["link"];
-                    $title = $data[$i]["title"]["rendered"];
-                    $media = $data[$i]["jetpack_featured_media_url"];
+                    $date = $data[$i]["date"]; // Article date
+                    $link = $data[$i]["link"]; // Article URL
+                    $title = $data[$i]["title"]["rendered"]; // Article title
+                    $media = $data[$i]["jetpack_featured_media_url"]; // Article visual
 
                     // Determine authors:
                     for ($j = 0; $j < 3; $j++) {
@@ -43,10 +43,11 @@
                     // Determine category/writing section:
                     $k = 0;
                     while ($data[$i]["categories"][$k] == 11) { // 11 == "Archives" category
-                        $k += 1;
+                        $k++; // Skip "Archives" category
                     }
                     $category = $data[$i]["categories"][$k];
 
+                    // Convert category id to category name
                     switch ($category) {
                         case 1891:
                             $category = "Editorial";
@@ -74,15 +75,18 @@
                     <div class="col-sm-6 col-lg-4 mb-4">
                         <!-- Display Article Card -->
                         <a href="<?php echo $link; ?>" target="_blank">
+                            <!-- Card -->
                             <div class="card border-0 rounded-0">
+                                <!-- Article Visual -->
                                 <img src="<?php echo $media; ?>" class="card-img-top border-0 rounded-0" alt="...">
+                                <!-- Card Body -->
                                 <div class="card-body p-4">
-                                    <p class="card-text card-category py-1 px-3 rounded-pill fw-bold"><?php echo $category?></p>
-                                    <h4 class="card-title fw-bold"><?php echo $title; ?></h4>
+                                    <p class="card-text card-category py-1 px-3 rounded-pill fw-bold"><?php echo $category?></p> <!-- Category -->
+                                    <h4 class="card-title fw-bold"><?php echo $title; ?></h4> <!-- Title -->
                                     <div class="card-byline">
                                         <img src="../images/quill.png" alt="">
-                                        <p class="card-text fw-bold mb-0"><?php echo $authors; ?></p>
-                                        <p class="card-text card-author"><?php echo date('M d Y', strtotime($date)); ?></p>
+                                        <p class="card-text fw-bold mb-0"><?php echo $authors; ?></p> <!-- Authors -->
+                                        <p class="card-text card-author"><?php echo date('M d Y', strtotime($date)); ?></p> <!-- Date -->
                                     </div>
                                 </div>
                             </div>

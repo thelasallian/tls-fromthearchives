@@ -21,7 +21,7 @@ body {
     color: #664011;
 }
 
-.articles .card * {
+.articles .card * { /* Add transition to all elements within cards */
     transition: 0.1s ease;
 }
 
@@ -34,12 +34,12 @@ body {
     text-decoration: underline;
 }
 
-.articles .card:hover > .card-img-top {
+.articles .card:hover > .card-img-top { /* Article Visual */
     filter: sepia(0.5);
 }
 
 .articles .card-byline {
-    position: relative;
+    position: relative; /* For .card-byline > img (feather) positioning */
 }
 
 .articles .card-byline > .card-text {
@@ -52,12 +52,12 @@ body {
     bottom: 0.7rem;
 }
 
-.articles .card-author {
+.articles .card-author { /* Article Date */
     display: inline-block;
     background-color: #FCE0BC;
 }
 
-.articles .card-category {
+.articles .card-category { /* Article Category */
     display: inline-block;
     text-transform: uppercase;
     background-color: #C2A683;
