@@ -54,7 +54,7 @@
                                 $category = "Editorial";
                                 break;
                             case 8:
-                                $category = "Menagarie";
+                                $category = "Menagerie";
                                 break;
                             case 5:
                                 $category = "Opinion";
