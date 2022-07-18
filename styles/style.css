@@ -25,6 +25,12 @@ body {
     transition: 0.1s ease;
 }
 
+.articles .card-img-top {
+    height: 16rem;
+    object-fit: cover;
+    object-position: top;
+}
+
 .articles .card:hover {
     box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.3);
     background-color: #f8f4e6;
