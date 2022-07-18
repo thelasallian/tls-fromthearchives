@@ -2,7 +2,7 @@
     if(session_status() == PHP_SESSION_NONE){
         session_start();
         $_SESSION["TIME_ACCESSED"] = time();
-        $_SESSION["ARTICLE_INFO"] = fetchInfo("https://thelasallian.com/wp-json/wp/v2/posts?_fields=jetpack_featured_media_url,date,link,title,authors&tags=2115&orderby=modified");
+        $_SESSION["ARTICLE_INFO"] = fetchInfo("https://thelasallian.com/wp-json/wp/v2/posts?_fields=jetpack_featured_media_url,date,link,title,authors,categories&tags=2115&orderby=modified");
     } else if(session_status() == PHP_SESSION_ACTIVE){
         $dateInitiallyAccessed = new DateTime($_SESSION["TIME_ACCESSED"]);
         $dateNow = new DateTime(time());
@@ -13,7 +13,7 @@
         // Refresh the time_accessed and article info after 10 hours
         if($eval == "5 Hours"){
             $_SESSION["TIME_ACCESSED"] = time();
-            $_SESSION["ARTICLE_INFO"] = fetchInfo("https://thelasallian.com/wp-json/wp/v2/posts?tags=2180&?_fields=date,guid,title,excerpt,authors");   
+            $_SESSION["ARTICLE_INFO"] = fetchInfo("https://thelasallian.com/wp-json/wp/v2/posts?_fields=jetpack_featured_media_url,date,link,title,authors,categories&tags=2115&orderby=modified");   
         }
     }
 ?>
