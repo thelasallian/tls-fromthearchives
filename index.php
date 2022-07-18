@@ -77,7 +77,7 @@
                             <div class="card border-0 rounded-0">
                                 <img src="<?php echo $media; ?>" class="card-img-top border-0 rounded-0" alt="...">
                                 <div class="card-body p-4">
-                                    <p class="card-text"><?php echo $category?></p>
+                                    <p class="card-text card-category py-1 px-3 rounded-pill fw-bold"><?php echo $category?></p>
                                     <h4 class="card-title fw-bold"><?php echo $title; ?></h4>
                                     <div class="card-byline">
                                         <img src="../images/quill.png" alt="">
