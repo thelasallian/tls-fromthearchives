@@ -20,7 +20,7 @@
     <footer class="py-5">
       <div class="container">
         <div class="row">
-          <div class="left col-xs-12 col-lg-5 col-sm-5 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start">
+          <div class="col-sm-12 col-lg-6 d-flex justify-content-center align-self-center align-items-lg-start text-center">
             <figure>
               <!-- Logo -->
               <img src="images/old-tls-wordmark.png" alt="TLS Name Logo" class="footer-logo mb-4">
@@ -28,7 +28,7 @@
               <figcaption class="footer-heading"><strong>Archives Website</strong></figcaption>
             </figure>
           </div>
-          <div class="col-xs-12 col-lg-6 col-sm-6 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start">
+          <div class="col-sm-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start">
             <!-- Description -->
             <p class="footer-description"><strong>The LaSallian</strong> is the official student publication of De La Salle University. It is of the
                                                                          students, by the students, and for the students. Our student writers, photographers,
