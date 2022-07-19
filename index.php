@@ -138,7 +138,7 @@ function getCategory($articles, $i, &$category) {
     while ($articles[$i]["categories"][$j] == 11) { // 11 == "Archives" category
         $j++; // Skip "Archives" category
     }
-    $category = $articles[$i]["categories"][$k];
+    $category = $articles[$i]["categories"][$j];
 
     // Convert category id to category name
     switch ($category) {
