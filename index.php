@@ -13,24 +13,25 @@
 
     <!-- Title -->
     <title>The LaSallian: From the Archives</title>
-
-    <!-- TODO: Add Favicon -->
 </head>
 <body>
-    <h1>Hello, world!</h1> <!-- Temporary -->
 
+    <!-- Articles Section -->
     <section class="articles">
         <div class="container">
+            <!-- Masonry Grid -->
             <div class="row" data-masonry='{"percentPosition": true }'>
+                <!-- Loop to Display Articles and Archived Photos -->
                 <?php
-                    $articles = $_SESSION["ARTICLE_INFO"];
-                    $photos = json_decode(file_get_contents("https://github.com/ronnparcia/tls-fta-scans/blob/main/featured.json?raw=true"), true);
-                    for ($i = 1; $i < 10; $i++) { 
-                        getArticleInfo($articles, $i, $date, $link, $title, $visual, $authors, $category);
-                        getArchivedPhotos($photos, $i - 1, $imageURL, $caption);
+                $articles = $_SESSION["ARTICLE_INFO"];
+                $photos = json_decode(file_get_contents("https://github.com/ronnparcia/tls-fta-scans/blob/main/featured.json?raw=true"), true);
+                for ($i = 1; $i < 10; $i++) { 
+                    getArticleInfo($articles, $i, $date, $link, $title, $visual, $authors, $category);
+                    getArchivedPhotos($photos, $i - 1, $imageURL, $caption);
                 ?>
+                    
+                    <!-- Display Article Card -->
                     <div class="col-sm-6 col-lg-4 mb-4">
-                        <!-- Display Article Card -->
                         <a href="<?php echo $link; ?>" target="_blank">
                             <!-- Card -->
                             <div class="card border-0 rounded-0">
@@ -50,10 +51,13 @@
                         </a>
                     </div>
 
+                    <!-- Display Archived Photo -->
                     <div class="col-sm-6 col-lg-4 mb-4">
-                        <!-- Display Image -->
+                        <!-- Card -->
                         <div class="card border-0 rounded-0 p-4">
+                            <!-- Archived Photo -->
                             <img src="<?php echo $imageURL; ?>" class="card-img-top rounded-0" alt="..." loading="lazy">
+                            <!-- Caption -->
                             <div class="card-body mt-4 p-0">
                                 <p class="card-text"><?php echo $caption; ?></p>
                             </div>
@@ -75,6 +79,17 @@
 
 <?php
 
+/**
+ * getArticleInfo gets the date, link, title, visual, authors, and category of an article.
+ *
+ * @param $articles - Array of articles from Wordpress.
+ * @param $i - Index of the article being searched for info.
+ * @param $date - Date of the article
+ * @param $link - URL of the article
+ * @param $title - Title of the article
+ * @param $authors - Author/s of the article
+ * @param $category - Writing section/category of the article
+ */
 function getArticleInfo($articles, $i,
                         &$date, &$link, &$title,
                         &$visual, &$authors, &$category)
@@ -88,6 +103,15 @@ function getArticleInfo($articles, $i,
     getCategory($articles, $i, $category);
 }
 
+/**
+ * getAuthors gets all the authors of an article.
+ * 
+ * This function searches the "authors" array and appends each author found to $authors
+ *
+ * @param $articles - Array of articles from Wordpress.
+ * @param $i - Index of the article being searched for info.
+ * @param $authors - Author/s of the article
+ */
 function getAuthors($articles, $i, &$authors) {
     $j = 0;
     do {
@@ -99,6 +123,16 @@ function getAuthors($articles, $i, &$authors) {
     } while (!empty($articles[$i]["authors"][$j]["display_name"]));
 }
 
+/**
+ * getCategory gets  the category of an article.
+ * 
+ * This function searches the "categories" array. It skips the "Archives" category until
+ * it finds the writing section. Then it converts the category id to the category name.
+ *
+ * @param $articles - Array of articles from Wordpress.
+ * @param $i - Index of the article being searched for info.
+ * @param $category - Writing section/category of the article
+ */
 function getCategory($articles, $i, &$category) {
     $j = 0;
     while ($articles[$i]["categories"][$j] == 11) { // 11 == "Archives" category
@@ -132,6 +166,14 @@ function getCategory($articles, $i, &$category) {
     }
 }
 
+/**
+ * getArchivedPhotos gets the link and caption of a photo.
+ *
+ * @param $articles - Array of archived photos.
+ * @param $i - Index of the photo being searched for info.
+ * @param $imageURL - Link to where the photo is hosted.
+ * @param $caption - Caption of the photo.
+ */
 function getArchivedPhotos($photos, $i, &$imageURL, &$caption) {
     $imageURL = $photos[$i]["image-url"];
     $caption = $photos[$i]["caption"];
