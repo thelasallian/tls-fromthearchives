@@ -24,13 +24,10 @@
             <div class="row" data-masonry='{"percentPosition": true }'>
                 <?php
                     $articles = $_SESSION["ARTICLE_INFO"];
+                    $photos = json_decode(file_get_contents("https://github.com/ronnparcia/tls-fta-scans/blob/main/featured.json?raw=true"), true);
                     for ($i = 1; $i < 10; $i++) { 
                         getArticleInfo($articles, $i, $date, $link, $title, $visual, $authors, $category);
-                        
-                        $scans = json_decode(file_get_contents("https://github.com/ronnparcia/tls-fta-scans/blob/main/featured.json?raw=true"), true);
-
-                        $scanImg = $scans[$i - 1]["image-url"];
-                        $caption = $scans[$i - 1]["caption"];
+                        getArchivedPhotos($photos, $i - 1, $imageURL, $caption);
                 ?>
                     <div class="col-sm-6 col-lg-4 mb-4">
                         <!-- Display Article Card -->
@@ -56,7 +53,7 @@
                     <div class="col-sm-6 col-lg-4 mb-4">
                         <!-- Display Image -->
                         <div class="card border-0 rounded-0 p-4">
-                            <img src="<?php echo $scanImg; ?>" class="card-img-top rounded-0" alt="..." loading="lazy">
+                            <img src="<?php echo $imageURL; ?>" class="card-img-top rounded-0" alt="..." loading="lazy">
                             <div class="card-body mt-4 p-0">
                                 <p class="card-text"><?php echo $caption; ?></p>
                             </div>
@@ -133,6 +130,11 @@ function getCategory($articles, $i, &$category) {
             $category = "Uncategorized";
             break;
     }
+}
+
+function getArchivedPhotos($photos, $i, &$imageURL, &$caption) {
+    $imageURL = $photos[$i]["image-url"];
+    $caption = $photos[$i]["caption"];
 }
 
 ?>
