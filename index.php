@@ -23,57 +23,11 @@
         <div class="container">
             <div class="row" data-masonry='{"percentPosition": true }'>
                 <?php
+                    $articles = $_SESSION["ARTICLE_INFO"];
                     for ($i = 1; $i < 10; $i++) { 
-                        $articles = $_SESSION["ARTICLE_INFO"];
-
-                        $date = $articles[$i]["date"]; // Article date
-                        $link = $articles[$i]["link"]; // Article URL
-                        $title = $articles[$i]["title"]["rendered"]; // Article title
-                        $visual = $articles[$i]["jetpack_featured_media_url"]; // Article visual
-
-                        // Determine authors:
-                        for ($j = 0; $j < 3; $j++) {
-                            if ($j == 0) {
-                                $authors .= $articles[$i]["authors"][$j]["display_name"];
-                            } else if ($j > 0 && !empty($articles[$i]["authors"][$j]["display_name"]) ) {
-                                $authors .= ", ";
-                                $authors .= $articles[$i]["authors"][$j]["display_name"];
-                            }
-                        }
+                        getArticleInfo($articles, $i, $date, $link, $title, $visual, $authors, $category);
                         
-                        // Determine category/writing section:
-                        $k = 0;
-                        while ($articles[$i]["categories"][$k] == 11) { // 11 == "Archives" category
-                            $k++; // Skip "Archives" category
-                        }
-                        $category = $articles[$i]["categories"][$k];
-
-                        // Convert category id to category name
-                        switch ($category) {
-                            case 1891:
-                                $category = "Editorial";
-                                break;
-                            case 8:
-                                $category = "Menagerie";
-                                break;
-                            case 5:
-                                $category = "Opinion";
-                                break;
-                            case 6:
-                                $category = "Sports";
-                                break;
-                            case 4:
-                                $category = "University";
-                                break;
-                            case 1883:
-                                $category = "Vanguard";
-                                break;
-                            default:
-                                $category = "Uncategorized";
-                                break;
-                        }
-
-                        $scans = json_decode(file_get_contents("https://github.com/ronnparcia/tls-fta-scans/blob/main/featured.json?raw=true"), true);;
+                        $scans = json_decode(file_get_contents("https://github.com/ronnparcia/tls-fta-scans/blob/main/featured.json?raw=true"), true);
 
                         $scanImg = $scans[$i - 1]["image-url"];
                         $caption = $scans[$i - 1]["caption"];
@@ -121,3 +75,64 @@
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 </body>
 </html>
+
+<?php
+
+function getArticleInfo($articles, $i,
+                        &$date, &$link, &$title,
+                        &$visual, &$authors, &$category)
+{
+    $date = $articles[$i]["date"]; // Article date
+    $link = $articles[$i]["link"]; // Article URL
+    $title = $articles[$i]["title"]["rendered"]; // Article title
+    $visual = $articles[$i]["jetpack_featured_media_url"]; // Article visual
+
+    getAuthors($articles, $i, $authors);
+    getCategory($articles, $i, $category);
+}
+
+function getAuthors($articles, $i, &$authors) {
+    $j = 0;
+    do {
+        $authors .= $articles[$i]["authors"][$j]["display_name"];
+        $j++;
+        if (!empty($articles[$i]["authors"][$j]["display_name"])) {
+            $authors .= ", ";
+        }
+    } while (!empty($articles[$i]["authors"][$j]["display_name"]));
+}
+
+function getCategory($articles, $i, &$category) {
+    $j = 0;
+    while ($articles[$i]["categories"][$j] == 11) { // 11 == "Archives" category
+        $j++; // Skip "Archives" category
+    }
+    $category = $articles[$i]["categories"][$k];
+
+    // Convert category id to category name
+    switch ($category) {
+        case 1891:
+            $category = "Editorial";
+            break;
+        case 8:
+            $category = "Menagerie";
+            break;
+        case 5:
+            $category = "Opinion";
+            break;
+        case 6:
+            $category = "Sports";
+            break;
+        case 4:
+            $category = "University";
+            break;
+        case 1883:
+            $category = "Vanguard";
+            break;
+        default:
+            $category = "Uncategorized";
+            break;
+    }
+}
+
+?>
