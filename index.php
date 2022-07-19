@@ -44,7 +44,7 @@
                                     <div class="card-byline">
                                         <img src="../images/quill.png" alt="">
                                         <p class="card-text fw-bold mb-0"><?php echo $authors; ?></p> <!-- Authors -->
-                                        <p class="card-text card-date"><?php echo date('M d Y', strtotime($date)); ?></p> <!-- Date -->
+                                        <p class="card-text card-date"><?php echo date('F j, Y', strtotime($date)); ?></p> <!-- Date -->
                                     </div>
                                 </div>
                             </div>
