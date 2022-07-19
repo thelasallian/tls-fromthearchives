@@ -17,7 +17,7 @@
 <body>
 
     <!-- Articles Section -->
-    <section class="articles">
+    <section class="articles py-5">
         <div class="container">
             <!-- Masonry Grid -->
             <div class="row" data-masonry='{"percentPosition": true }'>
