@@ -10,6 +10,78 @@
     font-family: 'Arno Pro';
 }
 
+body {
+    background-color: #C2A683 !important;
+}
+
+/* Article Cards */
+
+.articles {
+    color: #664011;
+}
+
+.articles a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.articles .card {
+    background-color: #F8EECC;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.articles .card * { /* Add transition to all elements within cards */
+    transition: 0.1s ease;
+}
+
+.articles .card-img-top {
+    height: 16rem;
+    object-fit: cover;
+    object-position: top;
+}
+
+.articles .card:hover {
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.3);
+    background-color: #f8f4e6;
+}
+
+.articles .card-title:hover {
+    text-decoration: underline;
+}
+
+.articles .card:hover > .card-img-top { /* Article Visual */
+    filter: sepia(0.5);
+}
+
+.articles .card-byline {
+    position: relative; /* For .card-byline > img (feather) positioning */
+}
+
+.articles .card-byline > .card-text {
+    padding: 0.1rem 1rem 0.1rem 3rem;
+}
+
+.articles .card-byline > img { /* Feather Icon */
+    position: absolute;
+    left: 0.2rem;
+    bottom: 0.7rem;
+}
+
+.articles .card-date { /* Article Date */
+    display: inline-block;
+    background-color: #FCE0BC;
+}
+
+.articles .card-category { /* Article Category */
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: #C2A683;
+    color: #F8EECC;
+}
+
+.articles .view-all-link:hover {
+    text-decoration: underline;
+
 /* Footer */
 footer {
     background-color: var(--russet);
