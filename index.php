@@ -16,9 +16,8 @@
 
     <!-- Title -->
     <title>The LaSallian: From the Archives</title>
-  </head>
-  <body>
-    <h1>🦕🦕🦕</h1> <!-- Temporary -->
+</head>
+<body>
 
 
     <!-- Footer -->
