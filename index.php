@@ -29,7 +29,7 @@
                 <div class="col-sm-12 col-lg-6 d-flex justify-content-center align-self-center align-items-lg-start text-center">
                     <figure>
                         <!-- Logo -->
-                        <img src="images/old-tls-wordmark.png" alt="TLS Name Logo" class="footer-logo mb-4">
+                        <img src="images/old-tls-wordmark.png" alt="TLS Name Logo" class="footer-logo mb-4 img-fluid">
                         <!-- Logo Heading -->
                         <figcaption class="footer-heading"><strong>Archives Website</strong></figcaption>
                     </figure>
