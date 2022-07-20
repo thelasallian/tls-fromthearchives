@@ -35,7 +35,7 @@ function getArticleInfo($articles, $i,
  */
 function getAuthors($articles, $i, &$authors)
 {
-    $authors = ""; // Reset authors to avoid succeeding article cards to append to previous articles' author/s
+    $authors = ""; // Reset authors to avoid succeeding article cards from appending previous articles' author/s
     $j = 0;
     do {
         $authors .= $articles[$i]["authors"][$j]["display_name"];
