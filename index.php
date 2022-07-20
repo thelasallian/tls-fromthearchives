@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <!-- Execute php rest script -->    
-    <?php require_once("php/rest.php")?>
+    <!-- Execute php rest script -->
+    <?php require_once("php/rest.php") ?>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +15,7 @@
     <!-- Title -->
     <title>The LaSallian: From the Archives</title>
 </head>
+
 <body>
 
     <!-- Articles Section -->
@@ -25,11 +27,11 @@
                 <?php
                 $articles = $_SESSION["ARTICLE_INFO"];
                 $photos = json_decode(file_get_contents("https://github.com/ronnparcia/tls-fta-scans/blob/main/featured.json?raw=true"), true);
-                for ($i = 1; $i < 10; $i++) { 
+                for ($i = 1; $i < 10; $i++) {
                     getArticleInfo($articles, $i, $date, $link, $title, $visual, $authors, $category);
                     getArchivedPhotos($photos, $i - 1, $imageURL, $caption);
                 ?>
-                    
+
                     <!-- Display Article Card -->
                     <div class="col-sm-6 col-lg-4 mb-4">
                         <a href="<?php echo $link; ?>" target="_blank">
@@ -39,7 +41,7 @@
                                 <img src="<?php echo $visual; ?>" class="card-img-top border-0 rounded-0" alt="..." loading="lazy">
                                 <!-- Card Body -->
                                 <div class="card-body p-4">
-                                    <p class="card-text card-category py-1 px-3 rounded-pill fw-bold"><?php echo $category?></p> <!-- Category -->
+                                    <p class="card-text card-category py-1 px-3 rounded-pill fw-bold"><?php echo $category ?></p> <!-- Category -->
                                     <h4 class="card-title fw-bold"><?php echo $title; ?></h4> <!-- Title -->
                                     <div class="card-byline">
                                         <img src="../images/quill.png" alt="">
@@ -63,8 +65,8 @@
                             </div>
                         </div>
                     </div>
-                    
-                <?php $authors = ""; } ?> <!-- for loop closing brace -->
+
+                <?php } ?> <!-- for loop closing brace -->
             </div>
         </div>
     </section>
@@ -75,6 +77,7 @@
     <!-- Masonry -->
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 </body>
+
 </html>
 
 <?php
@@ -112,7 +115,9 @@ function getArticleInfo($articles, $i,
  * @param $i - Index of the article being searched for info.
  * @param $authors - Author/s of the article
  */
-function getAuthors($articles, $i, &$authors) {
+function getAuthors($articles, $i, &$authors)
+{
+    $authors = ""; // Reset authors to avoid succeeding article cards to append to previous articles' author/s
     $j = 0;
     do {
         $authors .= $articles[$i]["authors"][$j]["display_name"];
@@ -133,7 +138,8 @@ function getAuthors($articles, $i, &$authors) {
  * @param $i - Index of the article being searched for info.
  * @param $category - Writing section/category of the article
  */
-function getCategory($articles, $i, &$category) {
+function getCategory($articles, $i, &$category)
+{
     $j = 0;
     while ($articles[$i]["categories"][$j] == 11) { // 11 == "Archives" category
         $j++; // Skip "Archives" category
@@ -174,7 +180,8 @@ function getCategory($articles, $i, &$category) {
  * @param $imageURL - Link to where the photo is hosted.
  * @param $caption - Caption of the photo.
  */
-function getArchivedPhotos($photos, $i, &$imageURL, &$caption) {
+function getArchivedPhotos($photos, $i, &$imageURL, &$caption)
+{
     $imageURL = $photos[$i]["image-url"];
     $caption = $photos[$i]["caption"];
 }
