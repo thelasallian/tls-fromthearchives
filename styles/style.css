@@ -10,6 +10,10 @@ body {
 
 /* Article Cards */
 
+.articles {
+    color: #664011;
+}
+
 .articles a {
     text-decoration: none;
     color: inherit;
@@ -18,7 +22,6 @@ body {
 .articles .card {
     background-color: #F8EECC;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
-    color: #664011;
 }
 
 .articles .card * { /* Add transition to all elements within cards */
@@ -68,4 +71,8 @@ body {
     text-transform: uppercase;
     background-color: #C2A683;
     color: #F8EECC;
+}
+
+.articles .view-all-link:hover {
+    text-decoration: underline;
 }
