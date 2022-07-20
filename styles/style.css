@@ -21,6 +21,11 @@ header {
     padding-bottom: 1rem;
 }
 
+/* TLS FTA Star in Header */
+.header-logo {
+    width: 84px;
+}
+
 h3.header-title-top {
     font-size: 2em !important;
     margin-top: -1rem;
