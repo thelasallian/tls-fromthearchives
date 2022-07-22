@@ -26,36 +26,43 @@
 </head>
 
 <body>
-    <!-- Fetch all articles -->
-    <?php $allArticles = $_SESSION["ARTICLE_INFO"]; ?>
-
-    <!-- Group articles by writing section -->
-    <?php
-    groupBySection($allArticles, $opedArticles,
-        $menageArticles, $sportsArticles,
-        $univArticles, $vangieArticles);
-        
-    if (count($univArticles) > 0) {
-        renderSection("University", $univArticles, $allArticles);
-    }
-
-    if (count($menageArticles) > 0) {
-        renderSection("Menagerie", $menageArticles, $allArticles);
-    }
-
-    if (count($sportsArticles) > 0) {
-        renderSection("Sports", $sportsArticles, $allArticles);
-    }
-
-    if (count($vangieArticles) > 0) {
-        renderSection("Vanguard", $vangieArticles, $allArticles);
-    }
-
-    if (count($opedArticles) > 0) {
-        renderSection("Opinion", $opedArticles, $allArticles);
-    }
     
-    ?>
+
+    <main>
+        <div class="container">
+            <!-- Fetch all articles -->
+            <?php $allArticles = $_SESSION["ARTICLE_INFO"]; ?>
+
+            <!-- Group articles by writing section -->
+            <?php
+            groupBySection($allArticles, $opedArticles,
+                $menageArticles, $sportsArticles,
+                $univArticles, $vangieArticles);
+
+            if (count($univArticles) > 0) {
+                renderSection("University", $univArticles, $allArticles);
+                
+            }
+
+            if (count($menageArticles) > 0) {
+                renderSection("Menagerie", $menageArticles, $allArticles);
+            }
+
+            if (count($sportsArticles) > 0) {
+                renderSection("Sports", $sportsArticles, $allArticles);
+            }
+
+            if (count($vangieArticles) > 0) {
+                renderSection("Vanguard", $vangieArticles, $allArticles);
+            }
+
+            if (count($opedArticles) > 0) {
+                renderSection("Opinion", $opedArticles, $allArticles);
+            }
+
+            ?>
+        </div>
+    </main>
 
     <!-- Footer -->
     <footer class="py-5">
@@ -100,18 +107,41 @@
 function renderSection($sectionName, $secArticles, $allArticles)
 {
     echo "<h1>$sectionName</h1>";
-        echo "<ol>";
-        foreach ($secArticles as $i)
-        {
-            getArticleInfo($allArticles, $i, $date, $link, $title, $visual, $authors, $category);
-            renderSmallArticleCard($title);
-        }
-        echo "</ol>";
-}
 
-function renderSmallArticleCard($title)
+    echo '<div class="row row-cols-1 row-cols-md-2 g-3">';
+    foreach ($secArticles as $i)
+    {
+        getArticleInfo($allArticles, $i, $date, $link, $title, $visual, $authors, $category);
+        renderSmallArticleCard($date, $link, $title, $visual);
+    }
+    echo '</div>';
+
+    
+}
+// TODO: Use img instead of bg-img for article visual for lazy loading
+function renderSmallArticleCard($date, $link, $title, $visual)
 {
-    echo "<li>$title</li>";
+    echo 
+    '<div class="col">
+        <a href="#">
+            <!-- Card -->
+            <div class="card">
+                <div class="row g-0">
+                    <!-- Left Side -->
+                    <div class="col-4 col-sm-4 col-lg-4 p-2 bg-primary" style="height: 8rem; background-image: url('.$visual.'); background-size: cover;">
+                        
+                    </div>
+                    <!-- Right Side -->
+                    <div class="col-8 col-sm-8 col-lg-8 d-flex">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title">'.$title.'</h5>
+                            <p class="card-text">'.date('F j, Y', strtotime($date)).'</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>';
 }
 
 ?>
