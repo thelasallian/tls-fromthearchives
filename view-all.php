@@ -117,7 +117,7 @@ function renderSmallArticleCard($date, $link, $title, $visual)
 {
     echo 
     '<div class="col">
-        <a href="#">
+        <a href="'.$link.'" target="_blank">
             <!-- Card -->
             <div class="card">
                 <div class="row g-0">
