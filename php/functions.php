@@ -104,4 +104,45 @@ function getArchivedPhotos($photos, $i, &$imageURL, &$caption)
     $caption = $photos[$i]["caption"];
 }
 
+function groupBySection($allArticles, &$opedArticles,
+                        &$menageArticles, &$sportsArticles,
+                        &$univArticles, &$vangieArticles)
+{
+    $opedArticles = [];
+    $menageArticles = [];
+    $sportsArticles = [];
+    $univArticles = [];
+    $vangieArticles = [];
+
+    for ($i = 0; $i < count($allArticles); $i++)
+    {
+        $j = 0;
+        while ($allArticles[$i]["categories"][$j] == 11) // 11 == "Archives" category
+        {  
+            $j++; // Skip "Archives" category
+        }
+        $category = $allArticles[$i]["categories"][$j];
+
+        switch ($category)
+        {
+            case 1891:
+            case 5:
+                array_push($opedArticles, $i);
+                break;
+            case 8:
+                array_push($menageArticles, $i);
+                break;
+            case 6:
+                array_push($sportsArticles, $i);
+                break;
+            case 4:
+                array_push($univArticles, $i);
+                break;
+            case 1883:
+                array_push($vangieArticles, $i);
+                break;
+        }
+    }
+}
+
 ?>
