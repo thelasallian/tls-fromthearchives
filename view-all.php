@@ -26,6 +26,15 @@
 </head>
 
 <body>
+    <!-- Fetch all articles -->
+    <?php $allArticles = $_SESSION["ARTICLE_INFO"]; ?>
+
+    <!-- Group articles by writing section -->
+    <?php
+    groupBySection($allArticles, $opedArticles,
+        $menageArticles, $sportsArticles,
+        $univArticles, $vangieArticles)
+    ?>
 
     
 
@@ -66,3 +75,10 @@
 </body>
 
 </html>
+
+<?php
+function renderSmallArticleCard($title)
+{
+    echo "<li>$title</li>";
+}
+?>
