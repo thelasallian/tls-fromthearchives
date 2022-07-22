@@ -39,26 +39,20 @@
                 $menageArticles, $sportsArticles,
                 $univArticles, $vangieArticles);
 
-            if (count($univArticles) > 0) {
+            if (count($univArticles) > 0)
                 renderSection("University", $univArticles, $allArticles);
-                
-            }
 
-            if (count($menageArticles) > 0) {
+            if (count($menageArticles) > 0)
                 renderSection("Menagerie", $menageArticles, $allArticles);
-            }
 
-            if (count($sportsArticles) > 0) {
+            if (count($sportsArticles) > 0)
                 renderSection("Sports", $sportsArticles, $allArticles);
-            }
 
-            if (count($vangieArticles) > 0) {
+            if (count($vangieArticles) > 0)
                 renderSection("Vanguard", $vangieArticles, $allArticles);
-            }
 
-            if (count($opedArticles) > 0) {
+            if (count($opedArticles) > 0)
                 renderSection("Opinion", $opedArticles, $allArticles);
-            }
 
             ?>
         </div>
