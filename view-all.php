@@ -4,9 +4,10 @@
 <head>
     <!-- Execute php -->
     <?php
-    require_once("php/rest.php"); // Execute php rest script
+    require_once("php/rest-all.php"); // Execute php rest script
     require_once("php/functions.php"); // Include helper functions for articles and archived photos
     ?>
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
