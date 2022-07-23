@@ -115,7 +115,6 @@ function renderSection($sectionName, $secArticles, $allArticles)
 
 function renderSmallArticleCard($date, $link, $title, $visual)
 {
-    // $title = substr($title, 19);
     $date = date('F j, Y', strtotime($date));
     
     echo <<<COL_CARD
@@ -125,11 +124,11 @@ function renderSmallArticleCard($date, $link, $title, $visual)
             <div class="card h-100">
                 <div class="row g-0 d-f h-100">
                     <!-- Left Side -->
-                    <div class="col-4 col-sm-4 col-lg-4 overflow-hidden" style="min-height: 7rem; max-height: 12rem">
+                    <div class="col-3 col-sm-3 col-lg-4 overflow-hidden" style="min-height: 7rem; max-height: 10rem">
                         <img class="w-100 h-100" style="object-fit: cover;" src="{$visual}" alt="" loading="lazy">
                     </div>
                     <!-- Right Side -->
-                    <div class="col-8 col-sm-8 col-lg-8 d-flex h-100">
+                    <div class="col-9 col-sm-9 col-lg-8 d-flex h-100">
                         <div class="card-body d-flex flex-column justify-content-center">
                             <h5 class="card-title fw-bold">{$title}</h5>
                             <p class="card-text">{$date}</p>
