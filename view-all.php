@@ -112,7 +112,7 @@ function renderSection($sectionName, $secArticles, $allArticles)
 
     
 }
-// TODO: Use img instead of bg-img for article visual for lazy loading
+
 function renderSmallArticleCard($date, $link, $title, $visual)
 {
     $date = date('F j, Y', strtotime($date));
@@ -125,7 +125,7 @@ function renderSmallArticleCard($date, $link, $title, $visual)
                 <div class="row g-0 d-f h-100">
                     <!-- Left Side -->
                     <div class="col-4 col-sm-4 col-lg-4 overflow-hidden h-100" style="min-height: 8rem; max-height: 10rem">
-                        <img class="w-100 h-100" style="object-fit: cover;" src="{$visual}" alt="">
+                        <img class="w-100 h-100" style="object-fit: cover;" src="{$visual}" alt="" loading="lazy">
                     </div>
                     <!-- Right Side -->
                     <div class="col-8 col-sm-8 col-lg-8 d-flex h-100">
