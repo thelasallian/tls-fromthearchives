@@ -142,10 +142,27 @@ footer .footer-developers {
 }
 
 /* Gallery */
+.gallery-card {
+    background-color: white;
+}
+
+.gallery-card:hover {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
 .gallery-card-img {
     height: 16rem;
     object-fit: cover;
     object-position: top;
+}
+
+.gallery-card-date {
+    color: #664011;
+    text-decoration: underline;
+}
+
+.gallery-card-caption {
+    color: #664011;
 }
 
 /* View All */
