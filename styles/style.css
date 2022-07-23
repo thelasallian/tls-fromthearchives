@@ -139,3 +139,11 @@ footer .footer-developers {
     font-size: 1.25em;
     font-weight: 500;
 }
+
+/* View All */
+.subpage-header {
+    background-image: url('../images/Header.png');
+    background-size: cover;
+    background-position: 100% 75%;
+    background-repeat: no-repeat;
+}
