@@ -44,9 +44,9 @@
         
             <!-- Header Article -->
             <div class="container col-sm-12 col-lg-6">
-                <div class="card d-flex flex-column border-0 rounded-0">
-                    <div class="row g-0">
-                        <div class=" header-article col-sm-12 col-lg-6 flex-column justify-content-left" style="height: 15 rem">
+                <div class="card h-100 border-0 rounded-0 overflow-hidden">
+                    <div class="row g-0 d-f h-100">
+                        <div class=" header-article col-6 col-sm-12 col-lg-6 flex-column justify-content-left overflow-hidden" style="max-height: 15 rem">
                             <!-- Article Details -->
                             <h5 class="d-inline-block article-category py-1 px-3 rounded-pill fw-bold"><?php echo $category; ?></h5> <!-- Category -->
                             <h4 class="article-title"><strong><?php echo $title; ?></strong></h4> <!-- Title -->
@@ -57,11 +57,11 @@
                             </div>
                             
                             <p class="article-excerpt"><?php echo $excerpt; ?></p> <!-- Excerpt -->
-                            <a href="<?php echo $link; ?>" class="stretched-link"></a> <!-- Hyperlink -->
+                            <a href="<?php echo $link; ?>" class="stretched-link" target="_blank"></a> <!-- Hyperlink -->
                         </div>
 
-                        <div class="col-lg-6 col-sm-12 overflow-hidden d-flex align-items-center" style="height: 15 rem">
-                            <img class="w-100" src="<?php echo $visual; ?>" alt="">
+                        <div class="article-visual col-6 col-lg-6 col-sm-12 overflow-hidden" style="max-height: 10 rem">
+                            <img class="card-img w-100 h-100 rounded-0" style="object-fit:cover;" src="<?php echo $visual; ?>" alt="">
                         </div>
                     </div>
                 </div>
