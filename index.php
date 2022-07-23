@@ -30,7 +30,7 @@
     <section class="articles py-5">
         <div class="container">
             <!-- Masonry Grid -->
-            <div class="row" data-masonry='{"percentPosition": true }'>
+            <div class="row g-5" data-masonry='{"percentPosition": true }'>
                 <!-- Loop to Display Articles and Archived Photos -->
                 <?php
                 $articles = $_SESSION["ARTICLE_INFO"];
