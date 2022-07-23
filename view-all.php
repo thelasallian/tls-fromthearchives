@@ -115,27 +115,30 @@ function renderSection($sectionName, $secArticles, $allArticles)
 // TODO: Use img instead of bg-img for article visual for lazy loading
 function renderSmallArticleCard($date, $link, $title, $visual)
 {
-    echo 
-    '<div class="col">
-        <a href="'.$link.'" target="_blank">
+    $date = date('F j, Y', strtotime($date));
+    
+    echo <<<COL_CARD
+    <div class="col">
+        <a href="{$link}" target="_blank">
             <!-- Card -->
             <div class="card">
                 <div class="row g-0">
                     <!-- Left Side -->
-                    <div class="col-4 col-sm-4 col-lg-4 p-2 bg-primary" style="height: 8rem; background-image: url('.$visual.'); background-size: cover;">
+                    <div class="col-4 col-sm-4 col-lg-4 p-2 bg-primary" style="height: 8rem; background-image: url({$visual}); background-size: cover;">
                         
                     </div>
                     <!-- Right Side -->
                     <div class="col-8 col-sm-8 col-lg-8 d-flex">
                         <div class="card-body d-flex flex-column justify-content-center">
-                            <h5 class="card-title">'.$title.'</h5>
-                            <p class="card-text">'.date('F j, Y', strtotime($date)).'</p>
+                            <h5 class="card-title">{$title}</h5>
+                            <p class="card-text">{$date}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </a>
-    </div>';
+    </div>
+    COL_CARD;
 }
 
 ?>
