@@ -10,6 +10,7 @@
  * @param $title - Title of the article
  * @param $authors - Author/s of the article
  * @param $category - Writing section/category of the article
+ * @param $excerpt - First few sentences of the article
  */
 function getArticleInfo($articles, $i,
                         &$date, &$link, &$title,
