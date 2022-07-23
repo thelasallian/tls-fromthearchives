@@ -1,4 +1,5 @@
 @import url("fonts.css");
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root{
     --russet: #834826;
@@ -7,7 +8,7 @@
 }
 
 * {
-    font-family: 'Arno Pro';
+    font-family: 'EB Garamond';
 }
 
 body {
@@ -28,6 +29,7 @@ body {
 .articles .card {
     background-color: #F8EECC;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+    transition: 0.1s ease;
 }
 
 .articles .card * { /* Add transition to all elements within cards */
@@ -49,7 +51,7 @@ body {
     text-decoration: underline;
 }
 
-.articles .card:hover > .card-img-top { /* Article Visual */
+.articles .card:hover .card-img { /* Article Visual */
     filter: sepia(0.5);
 }
 
@@ -137,4 +139,25 @@ footer .footer-developers {
     color: var(--cornsilk);
     font-size: 1.25em;
     font-weight: 500;
+}
+
+/* View All */
+.subpage-header {
+    background-image: url('../images/Header.png');
+    background-size: cover;
+    background-position: 100% 75%;
+    background-repeat: no-repeat;
+}
+
+.subpage-header .subpage-title {
+    text-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.5);
+}
+
+.subpage-header .homepage-link {
+    text-decoration: none;
+    color: var(--light-orange);
+}
+
+.subpage-header .homepage-link:hover {
+    text-decoration: underline;
 }
