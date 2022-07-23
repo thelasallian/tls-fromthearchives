@@ -125,6 +125,10 @@ p.article-excerpt {
     text-overflow: ellipsis;
 }
 
+.card-img {
+    filter: sepia(0.5);
+}
+
 /* Footer */
 footer {
     background-color: var(--russet);
