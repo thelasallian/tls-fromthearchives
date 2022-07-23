@@ -21,9 +21,10 @@
     <!-- Loop to Display Feature Article -->
     <?php
         $articles = $_SESSION["ARTICLE_INFO"];
-        getArticleInfo($articles, 0, $date, $link, $title, $visual, $authors, $category);
+        getArticleInfo($articles, 0, $date, $link, $title, $visual, $authors, $category, $excerpt);
     ?>  
-  <!-- Header -->
+    
+    <!-- Header -->
     <header>
         <div class="row">
             <!-- Header Title -->
@@ -55,7 +56,7 @@
                                 <p class="article-date"><?php echo date('F j, Y', strtotime($date)); ?></p> <!-- Date -->
                             </div>
                             
-                            <p class="article-excerpt"><?php echo $excerpt; ?>...</p> <!-- Excerpt -->
+                            <p class="article-excerpt"><?php echo $excerpt; ?></p> <!-- Excerpt -->
                             <a href="<?php echo $link; ?>" class="stretched-link"></a> <!-- Hyperlink -->
                         </div>
 
