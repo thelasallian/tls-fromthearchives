@@ -121,7 +121,7 @@ function renderSmallArticleCard($date, $link, $title, $visual)
     <div class="col">
         <a href="{$link}" target="_blank">
             <!-- Card -->
-            <div class="card h-100">
+            <div class="card h-100 border-0">
                 <div class="row g-0 d-f h-100">
                     <!-- Left Side -->
                     <div class="col-3 col-sm-3 col-lg-4 overflow-hidden" style="min-height: 7rem; max-height: 10rem">
