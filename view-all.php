@@ -31,13 +31,16 @@
 </head>
 
 <body>
-    <header class="subpage-header py-5 bg-primary">
-        <div class="container d-flex align-items-center flex-column flex-md-row">
-            <img class="me-md-4" src="images/old-tls-star.png" alt="">
-            <h1 class="lh-1 m-0 text-center text-md-start text-white">
-                <span class="subpage-title fw-bold">All Articles</span><br/>
-                <span class="subpage-subtitle fs-4">From the Archives</span>
-            </h1>
+    <header class="subpage-header py-5 text-center text-md-start ">
+        <div class="container">
+            <a class="homepage-link d-inline-block mb-3 fst-italic" href="index.php">← Back to Homepage</a>
+            <div class="d-flex align-items-center flex-column flex-md-row">
+                <img class="me-md-4" src="images/old-tls-star.png" alt="">
+                <h1 class="lh-1 m-0 text-white">
+                    <span class="subpage-title fw-bold">All Articles</span><br/>
+                    <span class="subpage-subtitle fs-4">From the Archives</span>
+                </h1>
+            </div>
         </div>
     </header>
 

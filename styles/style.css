@@ -151,3 +151,12 @@ footer .footer-developers {
 .subpage-header .subpage-title {
     text-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.5);
 }
+
+.subpage-header .homepage-link {
+    text-decoration: none;
+    color: var(--light-orange);
+}
+
+.subpage-header .homepage-link:hover {
+    text-decoration: underline;
+}
