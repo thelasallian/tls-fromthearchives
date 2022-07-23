@@ -100,9 +100,9 @@
 
 function renderSection($sectionName, $secArticles, $allArticles)
 {
-    echo "<h1>$sectionName</h1>";
+    echo "<h1 class='fw-bold fs-2 mb-3' style='color: #382215'>$sectionName</h1>";
 
-    echo '<div class="row row-cols-1 row-cols-md-2 g-3">';
+    echo '<div class="row row-cols-1 row-cols-md-2 g-3 mb-5">';
     foreach ($secArticles as $i)
     {
         getArticleInfo($allArticles, $i, $date, $link, $title, $visual, $authors, $category);
