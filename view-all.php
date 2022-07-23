@@ -32,9 +32,9 @@
 
 <body>
     <header class="subpage-header py-5 bg-primary">
-        <div class="container d-flex align-items-center">
-            <img src="images/old-tls-star.png" alt="">
-            <h1 class="lh-1 m-0">
+        <div class="container d-flex align-items-center flex-column flex-md-row">
+            <img class="me-md-4" src="images/old-tls-star.png" alt="">
+            <h1 class="lh-1 m-0 text-center text-md-start text-white">
                 <span class="subpage-title fw-bold">All Articles</span><br/>
                 <span class="subpage-subtitle fs-4">From the Archives</span>
             </h1>
