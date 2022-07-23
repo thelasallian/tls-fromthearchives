@@ -147,3 +147,7 @@ footer .footer-developers {
     background-position: 100% 75%;
     background-repeat: no-repeat;
 }
+
+.subpage-header .subpage-title {
+    text-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.5);
+}
