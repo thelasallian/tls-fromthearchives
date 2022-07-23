@@ -51,12 +51,13 @@
                 <!-- Display Archived Photo -->
                 <div class="col-sm-6 col-lg-4 mb-4">
                     <!-- Card -->
-                    <div class="card border-0 rounded-0 p-4">
+                    <div class="gallery-card border-0 rounded-0 p-4">
                         <!-- Archived Photo -->
-                        <img src="<?php echo $imageURL; ?>" class="card-img card-img-top rounded-0" alt="..." loading="lazy">
+                        <img src="<?php echo $imageURL; ?>" class="gallery-card-img card-img-top rounded-0 w-100" alt="..." loading="lazy">
                         <!-- Caption -->
-                        <div class="card-body mt-4 p-4">
-                            <p class="card-text"><?php echo $caption; ?></p>
+                        <div class="gallery-card-body mt-4">
+                            <h5 class="gallery-card-date text-center"><strong><?php echo $date; ?></strong></h5>
+                            <p class="gallery-card-text text-center"><?php echo $caption; ?></p>
                         </div>
                     </div>
                 </div>
