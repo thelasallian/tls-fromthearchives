@@ -141,6 +141,13 @@ footer .footer-developers {
     font-weight: 500;
 }
 
+/* Gallery */
+.gallery-card-img {
+    height: 16rem;
+    object-fit: cover;
+    object-position: top;
+}
+
 /* View All */
 .subpage-header {
     background-image: url('../images/Header.png');
