@@ -20,7 +20,7 @@ function getArticleInfo($articles, $i,
     $link = $articles[$i]["link"]; // Article URL
     $title = $articles[$i]["title"]["rendered"]; // Article title
     $visual = $articles[$i]["jetpack_featured_media_url"]; // Article visual
-    $excerpt = $excerpt[$i]["excerpt"]["rendered"]; // Article excerpt
+    $excerpt = $articles[$i]["excerpt"]["rendered"]; // Article excerpt
 
     getAuthors($articles, $i, $authors);
     getCategory($articles, $i, $category);
