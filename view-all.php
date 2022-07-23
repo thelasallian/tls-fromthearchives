@@ -121,14 +121,14 @@ function renderSmallArticleCard($date, $link, $title, $visual)
     <div class="col">
         <a href="{$link}" target="_blank">
             <!-- Card -->
-            <div class="card">
-                <div class="row g-0">
+            <div class="card h-100">
+                <div class="row g-0 d-f h-100">
                     <!-- Left Side -->
-                    <div class="col-4 col-sm-4 col-lg-4 p-2 bg-primary" style="height: 8rem; background-image: url({$visual}); background-size: cover;">
-                        
+                    <div class="col-4 col-sm-4 col-lg-4 overflow-hidden h-100" style="min-height: 8rem; max-height: 10rem">
+                        <img class="w-100 h-100" style="object-fit: cover;" src="{$visual}" alt="">
                     </div>
                     <!-- Right Side -->
-                    <div class="col-8 col-sm-8 col-lg-8 d-flex">
+                    <div class="col-8 col-sm-8 col-lg-8 d-flex h-100">
                         <div class="card-body d-flex flex-column justify-content-center">
                             <h5 class="card-title">{$title}</h5>
                             <p class="card-text">{$date}</p>
