@@ -28,7 +28,7 @@
 <body>
     
 
-    <main class="articles">
+    <main class="articles py-5">
         <div class="container">
             <!-- Fetch all articles -->
             <?php $allArticles = $_SESSION["ARTICLE_INFO"]; ?>
