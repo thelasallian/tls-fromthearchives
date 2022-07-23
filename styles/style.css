@@ -28,6 +28,7 @@ header {
     width: 84px;
 }
 
+/* Header Title */
 div.header-title {
     padding-left: 5em;
     padding-right: 5em;
@@ -51,37 +52,41 @@ p.header-description {
     color: var(--light-orange);
 }
 
+/* Header Article */
+div.row {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
 div.header-article {
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 .card {
-    box-shadow: 5px 3px 10px black;
-    height: 350px;
+    background: white;
+    box-shadow: 1px 1px 5px black;
+}
+
+.card:hover {
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.3);
+    background-color: #f8f4e6;
+}
+
+.article-title:hover {
+    text-decoration: underline;
 }
 
 div.card-body {
     margin-left: 1.5em;
 }
 
-.card-img {
-    height: 16rem;
-    object-fit: cover;
-}
-
 h5.article-category {
-    color: white;
-    border-radius: 25px;
-    background: var(--coffee);
-    width: 150px;
-    height: 24px;
-    margin-top: -10px;
-    padding: 2px;
-    padding-left: 16px;
-    box-shadow: 1px 1px 3px black;
-    display: inline-block;
+    /*display: inline-block;*/
     text-transform: uppercase;
+    background-color: var(--coffee);
+    color: white;
+    box-shadow: 1px 1px 5px black;
 }
 
 h4.article-title {
@@ -96,7 +101,6 @@ p.article-author {
     padding-right: 5px;
     box-shadow: 1px 1px 5px black;
     margin-top: 10px;
-
 }
 
 p.article-date {
@@ -107,10 +111,9 @@ p.article-date {
     font-style: italic;
     box-shadow: 1px 1px 5px black;
     margin-top: 10px;
-
 }
 
-p.article-intro {
+p.article-excerpt {
     color: white;
     background: var(--liver-chestnut);
     padding-left: 5px;
@@ -119,7 +122,6 @@ p.article-intro {
     padding-bottom: 5px;
     box-shadow: 1px 1px 5px black;
     margin-top: 10px;
-
 }
 
 /* Footer */
