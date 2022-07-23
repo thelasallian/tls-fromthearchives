@@ -21,6 +21,11 @@
     <link rel="icon" href="https://thelasallian.com/wp-content/uploads/2020/06/LOGO.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="https://thelasallian.com/wp-content/uploads/2020/06/LOGO.png" />
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+    
     <!-- Title -->
     <title>All Articles - The LaSallian: From the Archives</title>
 </head>
@@ -29,7 +34,7 @@
     <header class="subpage-header py-5 bg-primary">
         <div class="container d-flex align-items-center">
             <img src="images/old-tls-star.png" alt="">
-            <h1 class="lh-1">
+            <h1 class="lh-1 m-0">
                 <span class="subpage-title fw-bold">All Articles</span><br/>
                 <span class="subpage-subtitle fs-4">From the Archives</span>
             </h1>
