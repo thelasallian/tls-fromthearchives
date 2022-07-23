@@ -26,7 +26,15 @@
 </head>
 
 <body>
-    
+    <header class="subpage-header py-5 bg-primary">
+        <div class="container d-flex align-items-center">
+            <img src="images/old-tls-star.png" alt="">
+            <h1 class="lh-1">
+                <span class="subpage-title fw-bold">All Articles</span><br/>
+                <span class="subpage-subtitle fs-4">From the Archives</span>
+            </h1>
+        </div>
+    </header>
 
     <main class="articles py-5">
         <div class="container">
