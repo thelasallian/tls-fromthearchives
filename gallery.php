@@ -23,18 +23,76 @@
 </head>
 
 <body>
-    
-    <?php
-    $allPhotos = json_decode(file_get_contents("https://github.com/ronnparcia/tls-fta-scans/blob/main/all-photos.json?raw=true"), true);
-    foreach ($allPhotos as $photo):
-        $date = $photo["date"];
-        $caption = $photo["caption"];
-        $imageURL = $photo["image-url"];
-    ?>
-        
-        <!-- Insert Code for Photo Cards Here -->
+    <header class="subpage-header py-5">
+        <div class="container">
+            <a class="homepage-link d-inline-block mb-3 fst-italic" href="index.php">← Back to Homepage</a>
+            <div class="d-flex align-items-center flex-column flex-md-row">
+                <img class="me-md-4" src="images/old-tls-star.png" alt="">
+                <h1 class="lh-1 m-0 text-white text-center text-md-start">
+                    <span class="subpage-title fw-bold">All Photos</span><br/>
+                    <span class="subpage-subtitle fs-4">From the Archives</span>
+                </h1>
+            </div>
+        </div>
+    </header>
 
-    <?php endforeach; ?>
+    <main class="photos py-5">
+        <div class="container">
+            <div class="row g-5" data-masonry='{"percentPosition": true }'>
+            <!-- Loop to Display All Archived Photos -->
+            <?php
+                $allPhotos = json_decode(file_get_contents("https://github.com/ronnparcia/tls-fta-scans/blob/main/all-photos.json?raw=true"), true);
+                foreach ($allPhotos as $photo):
+                         $date = $photo["date"];
+                         $caption = $photo["caption"];
+                         $imageURL = $photo["image-url"];
+            ?>
+    
+                <!-- Display Archived Photo -->
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <!-- Card -->
+                    <div class="card border-0 rounded-0 p-4">
+                        <!-- Archived Photo -->
+                        <img src="<?php echo $imageURL; ?>" class="card-img card-img-top rounded-0" alt="..." loading="lazy">
+                        <!-- Caption -->
+                        <div class="card-body mt-4 p-4">
+                            <p class="card-text"><?php echo $caption; ?></p>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-6 d-flex justify-content-center align-self-center align-items-lg-start text-center">
+                    <figure>
+                        <!-- Logo -->
+                        <img src="images/old-tls-wordmark.png" alt="TLS Name Logo" class="footer-logo mb-4 img-fluid">
+                        <!-- Logo Heading -->
+                        <figcaption class="footer-heading"><strong>Archives Website</strong></figcaption>
+                    </figure>
+                </div>
+                <div class="col-sm-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start">
+                    <!-- Description -->
+                    <p class="footer-description">
+                        <strong>The LaSallian</strong> is the official student publication of De La Salle University.
+                        It is of the students, by the students, and for the students. Our student writers, photographers,
+                        videographers, and web managers are committed to the 61-year tradition of journalistic excellence
+                        and issue-oriented critical thinking.
+                    </p>
+                    <!-- Link to Main Website -->
+                    <p class="footer-link-main-site"><a href="https://thelasallian.com"><strong>Go to Main Website ></strong></a></p>
+                    <!-- Website Developers -->
+                    <p class="footer-developers"><strong>Website by Angelo Guerra & Ronn Parcia</strong></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
