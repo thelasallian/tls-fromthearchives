@@ -125,7 +125,7 @@ function renderSmallArticleCard($date, $link, $title, $visual)
                 <div class="row g-0 d-f h-100">
                     <!-- Left Side -->
                     <div class="col-3 col-sm-3 col-lg-4 overflow-hidden" style="min-height: 7rem; max-height: 10rem">
-                        <img class="w-100 h-100" style="object-fit: cover;" src="{$visual}" alt="" loading="lazy">
+                        <img class="card-img w-100 h-100" style="object-fit: cover;" src="{$visual}" alt="" loading="lazy">
                     </div>
                     <!-- Right Side -->
                     <div class="col-9 col-sm-9 col-lg-8 d-flex h-100">

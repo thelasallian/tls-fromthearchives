@@ -46,7 +46,7 @@
                             <!-- Card -->
                             <div class="card border-0 rounded-0">
                                 <!-- Article Visual -->
-                                <img src="<?php echo $visual; ?>" class="card-img-top border-0 rounded-0" alt="..." loading="lazy">
+                                <img src="<?php echo $visual; ?>" class="card-img card-img-top border-0 rounded-0" alt="..." loading="lazy">
                                 <!-- Card Body -->
                                 <div class="card-body p-4">
                                     <p class="card-text card-category py-1 px-3 rounded-pill fw-bold"><?php echo $category ?></p> <!-- Category -->
@@ -66,7 +66,7 @@
                         <!-- Card -->
                         <div class="card border-0 rounded-0 p-4">
                             <!-- Archived Photo -->
-                            <img src="<?php echo $imageURL; ?>" class="card-img-top rounded-0" alt="..." loading="lazy">
+                            <img src="<?php echo $imageURL; ?>" class="card-img card-img-top rounded-0" alt="..." loading="lazy">
                             <!-- Caption -->
                             <div class="card-body mt-4 p-0">
                                 <p class="card-text"><?php echo $caption; ?></p>
