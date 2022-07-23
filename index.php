@@ -78,7 +78,7 @@
             </div>
             
             <!-- View All Link -->
-            <a href="https://thelasallian.com/kicker/from-the-archives/" target="_blank" class="d-block text-center mt-4 view-all-link fw-bold fs-5">View All Articles</a>
+            <a href="view-all.php" class="d-block text-center mt-4 view-all-link fw-bold fs-5">View All Articles</a>
         </div>
 
     </section>
