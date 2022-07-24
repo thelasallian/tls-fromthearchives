@@ -24,6 +24,11 @@ function getArticleInfo($articles, $i,
     $excerpt = $articles[$i]["excerpt"]["rendered"]; // Article excerpt
     $excerpt = substr($excerpt, 3, -3);
     $excerpt = substr($excerpt, 0, -10);
+    
+    // Temporary code for removing heading in Marcos article
+    if ( substr_compare("Last of Two Series ", $excerpt, 0, 19) == 0 )
+        $excerpt = substr($excerpt, 19, -19);
+
     $excerpt = trunc($excerpt, 40);
 
     getAuthors($articles, $i, $authors);
