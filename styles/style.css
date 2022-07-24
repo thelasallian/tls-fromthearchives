@@ -36,7 +36,7 @@ header h3.header-title-top {
 header h1.header-title-bottom {
     font-size: 4em !important;
     color: var(--light-orange);
-    text-shadow: 1px 5px 15px black;
+    text-shadow: 0 .2rem .7rem rgba(0, 0, 0, 0.6);
     margin-top: -0.75rem;
 }
 
@@ -48,7 +48,7 @@ header p.header-description {
 /* Header Article */
 header .card {
     background: white;
-    box-shadow: 1px 1px 5px black;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.4);
     transition: 0.1s ease;
 }
 
@@ -74,7 +74,7 @@ header h5.article-category {
     text-transform: uppercase;
     background-color: var(--coffee);
     color: white;
-    box-shadow: 1px 1px 5px black;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.3);
 }
 
 header h4.article-title {
@@ -87,7 +87,7 @@ header p.article-author {
     background: var(--light-orange);
     padding-left: 5px;
     padding-right: 5px;
-    box-shadow: 1px 1px 5px black;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.3);
     margin-top: 10px;
 }
 
@@ -97,7 +97,7 @@ header p.article-date {
     padding-left: 5px;
     padding-right: 5px;
     font-style: italic;
-    box-shadow: 1px 1px 5px black;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.3);
     margin-top: 10px;
 }
 
@@ -108,7 +108,7 @@ header p.article-excerpt {
     padding-right: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
-    box-shadow: 1px 1px 5px black;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.3);
     margin-top: 10px;
 }
 
