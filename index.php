@@ -60,7 +60,7 @@
                                 </div>
 
                                 <p class="article-excerpt"><?php echo $excerpt; ?></p> <!-- Excerpt -->
-                                <a href="<?php echo $link; ?>" class="stretched-link" target="_blank"></a> Hyperlink
+                                <a href="<?php echo $link; ?>" class="stretched-link" target="_blank"></a>
                             </div>
 
                             <div class="article-visual col-12 col-lg-12 col-xl-6 overflow-hidden">
