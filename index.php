@@ -131,7 +131,10 @@
             </div>
 
             <!-- View All Link -->
-            <a href="view-all.php" class="d-block text-center mt-4 view-all-link fw-bold fs-5">View All Articles</a>
+            <div class="d-f text-center mt-5">
+                <a href="view-all.php" class="view-all-link fw-bold fs-5">View All Articles</a>
+                <a href="gallery.php" class="ms-5 view-all-link fw-bold fs-5">View All Photos</a>
+            </div>
         </div>
 
     </section>
