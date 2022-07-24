@@ -163,7 +163,7 @@
                     <!-- Link to Main Website -->
                     <p class="footer-link-main-site"><a href="https://thelasallian.com"><strong>Go to Main Website →</strong></a></p>
                     <!-- Website Developers -->
-                    <p class="footer-developers fst-italic mt-3">Website by Angelo Guerra & Ronn Parcia</p>
+                    <p class="footer-developers fst-italic mt-3">Website by <a href="https://github.com/angelocguerra" class="fs-5" target="_blank">Angelo Guerra</a> & <a href="https://github.com/ronnparcia" class="fs-5" target="_blank">Ronn Parcia</a></p>
                 </div>
             </div>
         </div>
