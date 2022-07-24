@@ -123,6 +123,7 @@
                             <div class="card-body mt-4 p-0">
                                 <p class="card-text"><?php echo $caption; ?></p>
                             </div>
+                            <a href="<?php echo $imageURL; ?>" target="_blank" class="stretched-link"></a>
                         </div>
                     </div>
 
