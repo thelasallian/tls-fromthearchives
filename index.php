@@ -175,5 +175,10 @@
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 
 </body>
-
+<!--
+Special thanks to Wee for helping with the website design,
+Rafgab for teaching us all of these
+Bonky for giving us this opportunity
+Eloi, Caryll, Bee, Rafa for helping us type the captions for the archived photos
+-->
 </html>
