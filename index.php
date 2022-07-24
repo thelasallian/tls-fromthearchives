@@ -157,9 +157,9 @@
                         and issue-oriented critical thinking.
                     </p>
                     <!-- Link to Main Website -->
-                    <p class="footer-link-main-site"><a href="https://thelasallian.com"><strong>Go to Main Website ></strong></a></p>
+                    <p class="footer-link-main-site"><a href="https://thelasallian.com"><strong>Go to Main Website →</strong></a></p>
                     <!-- Website Developers -->
-                    <p class="footer-developers"><strong>Website by Angelo Guerra & Ronn Parcia</strong></p>
+                    <p class="footer-developers fst-italic mt-3">Website by Angelo Guerra & Ronn Parcia</p>
                 </div>
             </div>
         </div>
