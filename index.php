@@ -26,6 +26,60 @@
 
 <body>
 
+    <?php
+    $articles = $_SESSION["ARTICLE_INFO"];
+    getArticleInfo($articles, 0, $date, $link, $title, $visual, $authors, $category, $excerpt);
+    ?>
+
+    <!-- Header -->
+    <header>
+        <div class="container py-5">
+            <div class="row my-0">
+                <!-- Header Title -->
+                <div class="header-title pb-5 pe-lg-5 pb-lg-0 col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-lg-start text-center">
+                    <!-- Logo -->
+                    <img src="images/old-tls-star.png" alt="The LaSallian FTA Star" class="header-logo mb-4">
+                    <!-- Header Title -->
+                    <h3 class="header-title-top">From the</h3>
+                    <h1 class="header-title-bottom"><strong>Archives</strong></h1>
+                    <!-- Header Description -->
+                    <p class="header-description">Since its founding in 1960, The LaSallian has been committed to chronicling
+                        chronicling the history of De La Salle University and Filipino society.
+                        Explore the publication's articles, photographs, artworks, and videos to
+                        truly unlock the essence of the bastion of issue-oriented critical thinking.
+                    </p>
+                </div>
+
+                <!-- Header Article -->
+                <div class="col-sm-12 col-lg-8">
+                    <div class="card h-100 border-0 rounded-0 overflow-hidden">
+                        <div class="row g-0 d-f flex-column-reverse flex-xl-row h-100 my-0">
+                            <div class="header-article col-12 col-lg-12 col-xl-6 flex-column justify-content-left overflow-hidden p-5">
+                                <!-- Article Details -->
+                                <h5 class="d-inline-block article-category py-1 px-3 rounded-pill fw-bold"><?php echo $category; ?></h5> <!-- Category -->
+                                <h4 class="article-title"><strong><?php echo $title; ?></strong></h4> <!-- Title -->
+
+                                <div class="d-flex flex-row">
+                                    <p class="article-author"><strong><?php echo $authors; ?></strong></p> <!-- Authors -->
+                                    <p class="article-date"><?php echo date('F j, Y', strtotime($date)); ?></p> <!-- Date -->
+                                </div>
+
+                                <p class="article-excerpt"><?php echo $excerpt; ?></p> <!-- Excerpt -->
+                                <a href="<?php echo $link; ?>" class="stretched-link" target="_blank"></a>
+                            </div>
+
+                            <div class="article-visual col-12 col-lg-12 col-xl-6 overflow-hidden">
+                                <img class="card-img w-100 h-100 rounded-0" style="object-fit:cover;" src="<?php echo $visual; ?>" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+ 
     <!-- Articles Section -->
     <section class="articles py-5">
         <div class="container">
@@ -33,10 +87,9 @@
             <div class="row g-5" data-masonry='{"percentPosition": true }'>
                 <!-- Loop to Display Articles and Archived Photos -->
                 <?php
-                $articles = $_SESSION["ARTICLE_INFO"];
                 $photos = json_decode(file_get_contents("https://github.com/ronnparcia/tls-fta-scans/blob/main/featured.json?raw=true"), true);
                 for ($i = 1; $i < 10; $i++) {
-                    getArticleInfo($articles, $i, $date, $link, $title, $visual, $authors, $category);
+                    getArticleInfo($articles, $i, $date, $link, $title, $visual, $authors, $category, $excerpt);
                     getArchivedPhotos($photos, $i - 1, $imageURL, $caption);
                 ?>
 
@@ -116,7 +169,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- Masonry -->
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
-
 </body>
 
 </html>
