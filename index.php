@@ -93,7 +93,7 @@
                 ?>
 
                     <!-- Display Article Card -->
-                    <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="col-sm-6 col-lg-4">
                         <a href="<?php echo $link; ?>" target="_blank">
                             <!-- Card -->
                             <div class="card border-0 rounded-0">
@@ -114,7 +114,7 @@
                     </div>
 
                     <!-- Display Archived Photo -->
-                    <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="col-sm-6 col-lg-4">
                         <!-- Card -->
                         <div class="card border-0 rounded-0 p-4">
                             <!-- Archived Photo -->
