@@ -20,6 +20,7 @@ function getArticleInfo($articles, $i,
     $link = $articles[$i]["link"]; // Article URL
     $title = $articles[$i]["title"]["rendered"]; // Article title
     $visual = $articles[$i]["jetpack_featured_media_url"]; // Article visual
+
     $excerpt = $articles[$i]["excerpt"]["rendered"]; // Article excerpt
     $excerpt = substr($excerpt, 3, -3);
     $excerpt = substr($excerpt, 0, -10);
@@ -109,13 +110,52 @@ function getArchivedPhotos($photos, $i, &$imageURL, &$caption)
     $caption = $photos[$i]["caption"];
 }
 
-?>
-
-<?php
 function trunc($phrase, $max_words) {
    $phrase_array = explode(' ',$phrase);
    if(count($phrase_array) > $max_words && $max_words > 0)
       $phrase = implode(' ',array_slice($phrase_array, 0, $max_words)).'...';
    return $phrase;
 }
+
+function groupBySection($allArticles, &$opedArticles,
+                        &$menageArticles, &$sportsArticles,
+                        &$univArticles, &$vangieArticles)
+{
+    $opedArticles = [];
+    $menageArticles = [];
+    $sportsArticles = [];
+    $univArticles = [];
+    $vangieArticles = [];
+
+    for ($i = 0; $i < count($allArticles); $i++)
+    {
+        $j = 0;
+        while ($allArticles[$i]["categories"][$j] == 11) // 11 == "Archives" category
+        {  
+            $j++; // Skip "Archives" category
+        }
+        $category = $allArticles[$i]["categories"][$j];
+
+        switch ($category)
+        {
+            case 1891:
+            case 5:
+                array_push($opedArticles, $i);
+                break;
+            case 8:
+                array_push($menageArticles, $i);
+                break;
+            case 6:
+                array_push($sportsArticles, $i);
+                break;
+            case 4:
+                array_push($univArticles, $i);
+                break;
+            case 1883:
+                array_push($vangieArticles, $i);
+                break;
+        }
+    }
+}
+
 ?>
