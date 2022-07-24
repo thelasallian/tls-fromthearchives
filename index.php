@@ -31,7 +31,7 @@
         <div class="container py-5">
             <div class="row my-0">
                 <!-- Header Title -->
-                <div class="header-title col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-lg-start text-center">
+                <div class="header-title pb-5 pe-lg-5 pb-lg-0 col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-lg-start text-center">
                     <!-- Logo -->
                     <img src="images/old-tls-star.png" alt="The LaSallian FTA Star" class="header-logo mb-4">
                     <!-- Header Title -->
@@ -60,7 +60,7 @@
                                 </div>
 
                                 <p class="article-excerpt"><?php echo $excerpt; ?></p> <!-- Excerpt -->
-                                <!-- <a href="<?php echo $link; ?>" class="stretched-link" target="_blank"></a> Hyperlink -->
+                                <a href="<?php echo $link; ?>" class="stretched-link" target="_blank"></a> Hyperlink
                             </div>
 
                             <div class="article-visual col-12 col-lg-12 col-xl-6 overflow-hidden">
@@ -73,21 +73,6 @@
         </div>
 
     </header>
-
-    <div class="n-header bg-secondary">
-        <div class="container">
-            <div class="row g-0 my-0">
-                <div class="col-5 bg-success">
-                    left
-                </div>
-                <div class="col-7 bg-warning">
-                    right
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- <h1 class="text-center">🦕🦕🦕</h1> Temporary -->
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
