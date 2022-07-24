@@ -59,6 +59,7 @@
                             <h5 class="gallery-card-date text-center"><strong><?php echo $date; ?></strong></h5>
                             <p class="gallery-card-text text-center"><?php echo $caption; ?></p>
                         </div>
+                        <a href="<?php echo $imageURL; ?>" target="_blank" class="stretched-link"></a>
                     </div>
                 </div>
             <?php endforeach; ?>
