@@ -49,11 +49,11 @@
             ?>
     
                 <!-- Display Archived Photo -->
-                <div class="col-sm-6 col-lg-3 col-md-4 mb-2">
+                <div class="col-sm-6 col-lg-4 col-md-4 mb-2">
                     <!-- Card -->
                     <div class="gallery-card border-0 rounded-0 p-3">
                         <!-- Archived Photo -->
-                        <img src="<?php echo $imageURL; ?>" class="gallery-card-img card-img-top rounded-0 w-100" alt="..." loading="lazy">
+                        <img src="<?php echo $imageURL; ?>" class="gallery-card-img card-img-top rounded-0 w-100" loading="lazy">
                         <!-- Caption -->
                         <div class="gallery-card-body mt-4">
                             <h5 class="gallery-card-date text-center"><strong><?php echo $date; ?></strong></h5>
