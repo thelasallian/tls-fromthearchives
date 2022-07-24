@@ -116,7 +116,7 @@ function renderSection($sectionName, $secArticles, $allArticles)
     echo '<div class="row row-cols-1 row-cols-md-2 g-3 mb-5">';
     foreach ($secArticles as $i)
     {
-        getArticleInfo($allArticles, $i, $date, $link, $title, $visual, $authors, $category);
+        getArticleInfo($allArticles, $i, $date, $link, $title, $visual, $authors, $category, $excerpt);
         renderSmallArticleCard($date, $link, $title, $visual);
     }
     echo '</div>';

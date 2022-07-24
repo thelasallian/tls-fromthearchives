@@ -5,6 +5,8 @@
     --russet: #834826;
     --light-orange: #F7D9B3;
     --cornsilk: #F8EECC;
+    --coffee: #7A5341;
+    --liver-chestnut: #98774D;
 }
 
 * {
@@ -83,6 +85,114 @@ body {
 
 .articles .view-all-link:hover {
     text-decoration: underline;
+}
+
+
+/* Header */
+header {
+    background-image: url(/images/Header.png);
+    background-size: cover;
+    background-position: center;
+}
+
+/* TLS FTA Star in Header */
+header .header-logo {
+    width: 84px;
+}
+
+/* Header Title */
+
+header h3.header-title-top {
+    font-size: 1.5em !important;
+    margin-top: -1rem;
+    color: var(--light-orange);
+}
+
+header h1.header-title-bottom {
+    font-size: 3.5em !important;
+    color: var(--light-orange);
+    text-shadow: 0 .2rem .7rem rgba(0, 0, 0, 0.6);
+    margin-top: -0.75rem;
+}
+
+header p.header-description {
+    font-size: 1.2em !important;
+}
+
+
+/* Header Article */
+header .card {
+    background: white;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+}
+
+header .card * {
+    transition: 0.1s ease;
+}
+
+header .card:hover {
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.3);
+    background-color: #f8f4e6;
+}
+
+
+header .article-title:hover {
+    text-decoration: underline;
+}
+
+header div.card-body {
+    margin-left: 1.5em;
+}
+
+header h5.article-category {
+    text-transform: uppercase;
+    background-color: var(--coffee);
+    color: white;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.3);
+}
+
+header h4.article-title {
+    color: var(--coffee);
+    padding-top: 10px;
+}
+
+header p.article-author {
+    color: var(--liver-chestnut);
+    background: var(--light-orange);
+    padding-left: 5px;
+    padding-right: 5px;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+}
+
+header p.article-date {
+    color: var(--liver-chestnut);
+    background: var(--cornsilk);
+    padding-left: 5px;
+    padding-right: 5px;
+    font-style: italic;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+}
+
+header p.article-excerpt {
+    color: white;
+    background: var(--liver-chestnut);
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+}
+
+header .card-img {
+    filter: sepia(0.5);
+}
+
+header .card:hover .card-img {
+    filter: sepia(0);
 }
 
 /* Footer */
