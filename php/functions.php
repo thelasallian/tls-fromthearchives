@@ -21,6 +21,9 @@ function getArticleInfo($articles, $i,
     $title = $articles[$i]["title"]["rendered"]; // Article title
     $visual = $articles[$i]["jetpack_featured_media_url"]; // Article visual
     $excerpt = $articles[$i]["excerpt"]["rendered"]; // Article excerpt
+    $excerpt = substr($excerpt, 3, -3);
+    $excerpt = substr($excerpt, 0, -10);
+    $excerpt = trunc($excerpt, 40);
 
     getAuthors($articles, $i, $authors);
     getCategory($articles, $i, $category);
@@ -106,4 +109,13 @@ function getArchivedPhotos($photos, $i, &$imageURL, &$caption)
     $caption = $photos[$i]["caption"];
 }
 
+?>
+
+<?php
+function trunc($phrase, $max_words) {
+   $phrase_array = explode(' ',$phrase);
+   if(count($phrase_array) > $max_words && $max_words > 0)
+      $phrase = implode(' ',array_slice($phrase_array, 0, $max_words)).'...';
+   return $phrase;
+}
 ?>

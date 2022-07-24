@@ -48,8 +48,8 @@
                 <!-- Header Article -->
                 <div class="col-sm-12 col-lg-8">
                     <div class="card h-100 border-0 rounded-0 overflow-hidden">
-                        <div class="row g-0 d-f h-100">
-                            <div class=" header-article col-6 col-sm-12 col-lg-6 flex-column justify-content-left overflow-hidden" style="max-height: 15 rem">
+                        <div class="row g-0 d-f h-100 my-0">
+                            <div class="header-article col-6 col-sm-12 col-lg-6 flex-column justify-content-left overflow-hidden p-5">
                                 <!-- Article Details -->
                                 <h5 class="d-inline-block article-category py-1 px-3 rounded-pill fw-bold"><?php echo $category; ?></h5> <!-- Category -->
                                 <h4 class="article-title"><strong><?php echo $title; ?></strong></h4> <!-- Title -->
@@ -60,7 +60,7 @@
                                 </div>
 
                                 <p class="article-excerpt"><?php echo $excerpt; ?></p> <!-- Excerpt -->
-                                <a href="<?php echo $link; ?>" class="stretched-link" target="_blank"></a> <!-- Hyperlink -->
+                                <!-- <a href="<?php echo $link; ?>" class="stretched-link" target="_blank"></a> Hyperlink -->
                             </div>
 
                             <div class="article-visual col-6 col-lg-6 col-sm-12 overflow-hidden">

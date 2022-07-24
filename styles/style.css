@@ -54,14 +54,14 @@ p.header-description {
 }
 
 /* Header Article */
-div.row {
+/* div.row {
     margin-top: 0rem;
     margin-bottom: 0rem;
-}
+} */
 
 div.header-article {
-    padding-left: 2em;
-    padding-right: 2em;
+    /* padding-left: 2em;
+    padding-right: 2em; */
 }
 
 .card {
@@ -123,7 +123,10 @@ p.article-excerpt {
     padding-bottom: 5px;
     box-shadow: 1px 1px 5px black;
     margin-top: 10px;
+    /* white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
+    height: 10rem; */
 }
 
 .card-img {
