@@ -252,6 +252,31 @@ footer .footer-developers {
     font-weight: 500;
 }
 
+/* Gallery */
+.gallery-card {
+    background-color: white;
+    transition: 0.1s ease;
+}
+
+.gallery-card:hover {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.gallery-card-img {
+    height: 16rem;
+    object-fit: cover;
+    object-position: top;
+}
+
+.gallery-card-date {
+    color: #664011;
+    text-decoration: underline;
+}
+
+.gallery-card-caption {
+    color: #664011;
+}
+
 /* View All */
 .subpage-header {
     background-image: url('../images/Header.png');
