@@ -38,7 +38,7 @@
 
     <main class="photos py-5">
         <div class="container">
-            <div class="row g-5" data-masonry='{"percentPosition": true }'>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3" data-masonry='{"percentPosition": true }'>
             <!-- Loop to Display All Archived Photos -->
             <?php
                 $allPhotos = json_decode(file_get_contents("https://github.com/ronnparcia/tls-fta-scans/blob/main/all-photos.json?raw=true"), true);
@@ -49,9 +49,9 @@
             ?>
     
                 <!-- Display Archived Photo -->
-                <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="col-sm-6 col-lg-3 col-md-4 mb-2">
                     <!-- Card -->
-                    <div class="gallery-card border-0 rounded-0 p-4">
+                    <div class="gallery-card border-0 rounded-0 p-3">
                         <!-- Archived Photo -->
                         <img src="<?php echo $imageURL; ?>" class="gallery-card-img card-img-top rounded-0 w-100" alt="..." loading="lazy">
                         <!-- Caption -->
