@@ -28,20 +28,20 @@ header .header-logo {
 /* Header Title */
 
 header h3.header-title-top {
-    font-size: 2em !important;
+    font-size: 1.5em !important;
     margin-top: -1rem;
     color: var(--light-orange);
 }
 
 header h1.header-title-bottom {
-    font-size: 4em !important;
+    font-size: 3.5em !important;
     color: var(--light-orange);
     text-shadow: 0 .2rem .7rem rgba(0, 0, 0, 0.6);
     margin-top: -0.75rem;
 }
 
 header p.header-description {
-    font-size: 1.25em !important;
+    font-size: 1.2em !important;
     color: var(--light-orange);
 }
 
