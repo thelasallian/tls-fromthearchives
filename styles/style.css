@@ -116,6 +116,7 @@ header h1.header-title-bottom {
 }
 
 header p.header-description {
+    color: var(--light-orange) !important;
     font-size: 1.2em !important;
 }
 
