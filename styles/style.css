@@ -21,63 +21,68 @@ header {
 }
 
 /* TLS FTA Star in Header */
-.header-logo {
+header .header-logo {
     width: 84px;
 }
 
 /* Header Title */
 
-h3.header-title-top {
+header h3.header-title-top {
     font-size: 2em !important;
     margin-top: -1rem;
     color: var(--light-orange);
 }
 
-h1.header-title-bottom {
+header h1.header-title-bottom {
     font-size: 4em !important;
     color: var(--light-orange);
     text-shadow: 1px 5px 15px black;
     margin-top: -0.75rem;
 }
 
-p.header-description {
+header p.header-description {
     font-size: 1.25em !important;
     color: var(--light-orange);
 }
 
 /* Header Article */
-
-.card {
+header .card {
     background: white;
     box-shadow: 1px 1px 5px black;
+    transition: 0.1s ease;
 }
 
-.card:hover {
+header .card * {
+    transition: 0.1s ease;
+}
+
+header .card:hover {
     box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.3);
     background-color: #f8f4e6;
 }
 
-.article-title:hover {
+
+header .article-title:hover {
     text-decoration: underline;
 }
 
-div.card-body {
+header div.card-body {
     margin-left: 1.5em;
 }
 
-h5.article-category {
+header h5.article-category {
     text-transform: uppercase;
     background-color: var(--coffee);
     color: white;
     box-shadow: 1px 1px 5px black;
 }
 
-h4.article-title {
+header h4.article-title {
     color: var(--coffee);
     padding-top: 10px;
 }
 
-p.article-author {
+header p.article-author {
     color: var(--liver-chestnut);
     background: var(--light-orange);
     padding-left: 5px;
@@ -86,7 +91,7 @@ p.article-author {
     margin-top: 10px;
 }
 
-p.article-date {
+header p.article-date {
     color: var(--liver-chestnut);
     background: var(--cornsilk);
     padding-left: 5px;
@@ -96,7 +101,7 @@ p.article-date {
     margin-top: 10px;
 }
 
-p.article-excerpt {
+header p.article-excerpt {
     color: white;
     background: var(--liver-chestnut);
     padding-left: 5px;
@@ -107,8 +112,12 @@ p.article-excerpt {
     margin-top: 10px;
 }
 
-.card-img {
+header .card-img {
     filter: sepia(0.5);
+}
+
+header .card:hover .card-img {
+    filter: sepia(0);
 }
 
 /* Footer */
