@@ -87,9 +87,9 @@
                         and issue-oriented critical thinking.
                     </p>
                     <!-- Link to Main Website -->
-                    <p class="footer-link-main-site"><a href="https://thelasallian.com"><strong>Go to Main Website ></strong></a></p>
+                    <p class="footer-link-main-site"><a href="https://thelasallian.com"><strong>Go to Main Website →</strong></a></p>
                     <!-- Website Developers -->
-                    <p class="footer-developers"><strong>Website by Angelo Guerra & Ronn Parcia</strong></p>
+                    <p class="footer-developers mt-3">Website by <a href="https://github.com/angelocguerra" class="fs-5" target="_blank">Angelo Guerra</a> & <a href="https://github.com/ronnparcia" class="fs-5" target="_blank">Ronn Parcia</a></p>
                 </div>
             </div>
         </div>
