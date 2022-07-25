@@ -1,12 +1,8 @@
+<?php require_once("php/rest.php"); ?>
+<?php require_once("php/functions.php"); ?>
 <!doctype html>
 <html lang="en">
-
 <head>
-    <!-- Execute php -->
-    <?php
-    require_once("php/rest.php"); // Execute php rest script
-    require_once("php/functions.php"); // Include helper functions for articles and archived photos
-    ?>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,7 +38,7 @@
                     <h3 class="header-title-top">From the</h3>
                     <h1 class="header-title-bottom"><strong>Archives</strong></h1>
                     <!-- Header Description -->
-                    <p class="header-description">Since its founding in 1960, The LaSallian has been committed to chronicling
+                    <p class="header-description">Since its founding in 1960, The LaSallian has been committed to
                         chronicling the history of De La Salle University and Filipino society.
                         Explore the publication's articles, photographs, artworks, and videos to
                         truly unlock the essence of the bastion of issue-oriented critical thinking.
@@ -133,8 +129,8 @@
 
             <!-- View All Link -->
             <div class="d-f text-center mt-5">
-                <a href="view-all.php" class="view-all-link fw-bold fs-5">View All Articles</a>
-                <a href="gallery.php" class="ms-5 view-all-link fw-bold fs-5">View All Photos</a>
+                <a href="view-all.php" class="view-all-link fw-bold fs-5">View all articles</a>
+                <a href="gallery.php" class="ms-5 view-all-link fw-bold fs-5">View all photos</a>
             </div>
         </div>
 
@@ -163,7 +159,7 @@
                     <!-- Link to Main Website -->
                     <p class="footer-link-main-site"><a href="https://thelasallian.com"><strong>Go to Main Website →</strong></a></p>
                     <!-- Website Developers -->
-                    <p class="footer-developers fst-italic mt-3">Website by <a href="https://github.com/angelocguerra" class="fs-5" target="_blank">Angelo Guerra</a> & <a href="https://github.com/ronnparcia" class="fs-5" target="_blank">Ronn Parcia</a></p>
+                    <p class="footer-developers mt-3">Website by <a href="https://github.com/angelocguerra" class="fs-5" target="_blank">Angelo Guerra</a> & <a href="https://github.com/ronnparcia" class="fs-5" target="_blank">Ronn Parcia</a></p>
                 </div>
             </div>
         </div>
